@@ -543,6 +543,393 @@ a:hover {
 }
 
 /* ============================================
+   Page Headers (for inner pages)
+   ============================================ */
+.page-header {
+  padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+  background-color: var(--color-cream-dark);
+  text-align: center;
+}
+
+.page-header h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: var(--color-charcoal-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-header--sage {
+  background-color: var(--color-sage);
+  color: var(--color-white);
+}
+
+.page-header--sage h1,
+.page-header--sage p {
+  color: var(--color-white);
+}
+
+/* ============================================
+   About Page Styles
+   ============================================ */
+.about-page__intro {
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+.about-page__intro h2 {
+  margin-bottom: var(--space-md);
+}
+
+.about-page__intro p {
+  color: var(--color-charcoal-light);
+  font-size: 1.1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.value-card {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  border-left: 3px solid var(--color-sage);
+}
+
+.value-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+}
+
+.value-card p {
+  color: var(--color-charcoal-light);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.about-page__values {
+  margin-bottom: var(--space-xl);
+}
+
+.about-page__cta {
+  text-align: center;
+  padding: var(--space-lg);
+  background-color: var(--color-cream-dark);
+}
+
+.about-page__cta h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.about-page__cta p {
+  margin-bottom: var(--space-md);
+  color: var(--color-charcoal-light);
+}
+
+/* ============================================
+   Services Page Styles
+   ============================================ */
+.services-page__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-cream-dark);
+}
+
+.service-detail:last-child {
+  border-bottom: none;
+}
+
+.service-detail__icon {
+  width: 60px;
+  height: 60px;
+  color: var(--color-sage);
+}
+
+.service-detail__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-detail__content h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.service-detail__content p {
+  color: var(--color-charcoal-light);
+}
+
+.services-page__cta {
+  text-align: center;
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background-color: var(--color-cream-dark);
+}
+
+.services-page__cta h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.services-page__cta p {
+  margin-bottom: var(--space-md);
+  color: var(--color-charcoal-light);
+}
+
+/* ============================================
+   Specialties Page Styles
+   ============================================ */
+.specialties-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.specialty-detail {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+}
+
+.specialty-detail h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-sage-dark);
+}
+
+.specialty-detail p {
+  color: var(--color-charcoal-light);
+}
+
+.specialty-list {
+  list-style: none;
+  margin: var(--space-sm) 0;
+}
+
+.specialty-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-charcoal-light);
+}
+
+.specialty-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-sage);
+  border-radius: 50%;
+}
+
+.specialty-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
+.specialties-page__cta {
+  text-align: center;
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background-color: var(--color-white);
+}
+
+.specialties-page__cta h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.specialties-page__cta p {
+  margin-bottom: var(--space-md);
+  color: var(--color-charcoal-light);
+}
+
+/* ============================================
+   Practitioners Page Styles
+   ============================================ */
+.practitioners-intro {
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-charcoal-light);
+}
+
+.practitioners-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.practitioner-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-lg);
+  background-color: var(--color-white);
+  padding: var(--space-md);
+}
+
+.practitioner-card:nth-child(even) {
+  direction: rtl;
+}
+
+.practitioner-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.practitioner-card__image {
+  position: relative;
+}
+
+.practitioner-card__image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background-color: var(--color-cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-charcoal-light);
+  font-size: 0.9rem;
+}
+
+.practitioner-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.practitioner-card__content h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.practitioner-card__title {
+  font-size: 1rem;
+  color: var(--color-sage);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.practitioner-card__specialties {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.practitioner-card__specialties strong {
+  color: var(--color-charcoal);
+}
+
+.practitioner-card__bio {
+  color: var(--color-charcoal-light);
+  margin-bottom: var(--space-sm);
+}
+
+.practitioner-card__credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.practitioners-cta {
+  text-align: center;
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background-color: var(--color-cream-dark);
+}
+
+.practitioners-cta h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.practitioners-cta p {
+  margin-bottom: var(--space-md);
+  color: var(--color-charcoal-light);
+}
+
+/* ============================================
+   Contact Page Styles
+   ============================================ */
+.contact-page {
+  background-color: var(--color-cream);
+}
+
+.contact-page .contact__grid {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+}
+
+.contact__hours {
+  margin-top: var(--space-lg);
+}
+
+.contact__hours h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.contact__hours ul {
+  list-style: none;
+}
+
+.contact__hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-cream-dark);
+  color: var(--color-charcoal-light);
+}
+
+.contact__hours li span {
+  color: var(--color-charcoal);
+}
+
+.contact__form-wrapper h2 {
+  margin-bottom: var(--space-md);
+}
+
+.form-group select {
+  padding: 1rem;
+  border: 1px solid var(--color-cream-dark);
+  background-color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-sage);
+}
+
+/* Active nav link state */
+.nav__link--active {
+  color: var(--color-sage-dark);
+}
+
+.nav__link--active::after {
+  width: 100%;
+}
+
+/* ============================================
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
@@ -585,6 +972,35 @@ a:hover {
   .hero {
     min-height: auto;
     padding: calc(80px + var(--space-lg)) var(--space-sm) var(--space-lg);
+  }
+
+  /* Practitioner cards responsive */
+  .practitioner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .practitioner-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .practitioner-card__image-placeholder {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Service details responsive */
+  .service-detail {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .service-detail__icon {
+    margin: 0 auto;
+  }
+
+  /* Contact page responsive */
+  .contact-page .contact__grid {
+    padding: var(--space-md);
   }
 }
 
