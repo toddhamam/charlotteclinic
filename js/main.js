@@ -3,23 +3,74 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
+  // ============================================
+  // Scroll Animations with Intersection Observer
+  // ============================================
+  const animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -80px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  animatedElements.forEach(el => observer.observe(el));
   // Mobile Navigation Toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navList = document.querySelector('.nav__list');
+  const header = document.querySelector('.header');
+
+  // Create overlay element for mobile nav
+  const navOverlay = document.createElement('div');
+  navOverlay.className = 'nav-overlay';
+  document.body.appendChild(navOverlay);
+
+  function closeNav() {
+    navList.classList.remove('active');
+    navToggle.classList.remove('active');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openNav() {
+    navList.classList.add('active');
+    navToggle.classList.add('active');
+    navOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
   if (navToggle && navList) {
     navToggle.addEventListener('click', function() {
-      navList.classList.toggle('active');
-      navToggle.classList.toggle('active');
+      if (navList.classList.contains('active')) {
+        closeNav();
+      } else {
+        openNav();
+      }
     });
+
+    // Close mobile nav when clicking overlay
+    navOverlay.addEventListener('click', closeNav);
 
     // Close mobile nav when clicking a link
     const navLinks = navList.querySelectorAll('.nav__link');
     navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navList.classList.remove('active');
-        navToggle.classList.remove('active');
-      });
+      link.addEventListener('click', closeNav);
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navList.classList.contains('active')) {
+        closeNav();
+      }
     });
   }
 
@@ -42,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Header scroll effect
-  const header = document.querySelector('.header');
   if (header) {
     let lastScroll = 0;
 
@@ -77,4 +127,29 @@ document.addEventListener('DOMContentLoaded', function() {
       contactForm.reset();
     });
   }
+
+  // ============================================
+  // FAQ Accordion
+  // ============================================
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-item__question');
+
+    question.addEventListener('click', function() {
+      const isActive = item.classList.contains('active');
+
+      // Close all other items (optional - for single open behavior)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle('active');
+      this.setAttribute('aria-expanded', !isActive);
+    });
+  });
 });
