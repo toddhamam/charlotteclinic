@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an appointment at Charlotte Clinic - Schedule your acupuncture or Chinese medicine consultation online.">
+  <title>Book Appointment | Charlotte Clinic</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">Charlotte <span>Clinic</span></a>
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__list">
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="practitioners.html" class="nav__link">Practitioners</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="specialties.html" class="nav__link">Specialties</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li class="nav__item--mobile"><a href="booking.html" class="btn btn--primary btn--small">Book Appointment</a></li>
+        </ul>
+        <a href="booking.html" class="btn btn--primary btn--small nav__book-btn">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Book Your Appointment</h1>
+      <p>Select a service, choose your preferred time, and secure your booking</p>
+    </div>
+  </section>
+
+  <!-- Booking Portal -->
+  <section class="booking-portal section-padding">
+    <div class="container">
+      <!-- Progress Steps -->
+      <div class="booking-steps fade-in">
+        <div class="booking-step active" data-step="1">
+          <span class="booking-step__number">1</span>
+          <span class="booking-step__label">Select Service</span>
+        </div>
+        <div class="booking-step" data-step="2">
+          <span class="booking-step__number">2</span>
+          <span class="booking-step__label">Choose Time</span>
+        </div>
+        <div class="booking-step" data-step="3">
+          <span class="booking-step__number">3</span>
+          <span class="booking-step__label">Your Details</span>
+        </div>
+        <div class="booking-step" data-step="4">
+          <span class="booking-step__number">4</span>
+          <span class="booking-step__label">Confirm & Pay</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Service Selection -->
+      <div class="booking-panel" id="step-1">
+        <h2 class="booking-panel__title fade-in">Select Your Service</h2>
+        <div class="service-selection">
+          <label class="service-option fade-in-scale stagger-1">
+            <input type="radio" name="service" value="initial-consultation">
+            <div class="service-option__card">
+              <h3>Initial Consultation</h3>
+              <p class="service-option__duration">90 minutes</p>
+              <p class="service-option__description">Comprehensive first visit including health assessment, diagnosis, and treatment.</p>
+              <p class="service-option__price">$150</p>
+            </div>
+          </label>
+
+          <label class="service-option fade-in-scale stagger-2">
+            <input type="radio" name="service" value="acupuncture">
+            <div class="service-option__card">
+              <h3>Acupuncture Session</h3>
+              <p class="service-option__duration">60 minutes</p>
+              <p class="service-option__description">Follow-up acupuncture treatment tailored to your ongoing care plan.</p>
+              <p class="service-option__price">$95</p>
+            </div>
+          </label>
+
+          <label class="service-option fade-in-scale stagger-3">
+            <input type="radio" name="service" value="cupping">
+            <div class="service-option__card">
+              <h3>Cupping Therapy</h3>
+              <p class="service-option__duration">45 minutes</p>
+              <p class="service-option__description">Therapeutic cupping to release tension and promote circulation.</p>
+              <p class="service-option__price">$75</p>
+            </div>
+          </label>
+
+          <label class="service-option fade-in-scale stagger-4">
+            <input type="radio" name="service" value="cosmetic">
+            <div class="service-option__card">
+              <h3>Cosmetic Acupuncture</h3>
+              <p class="service-option__duration">75 minutes</p>
+              <p class="service-option__description">Natural facial rejuvenation treatment for a refreshed appearance.</p>
+              <p class="service-option__price">$120</p>
+            </div>
+          </label>
+
+          <label class="service-option fade-in-scale stagger-5">
+            <input type="radio" name="service" value="reiki">
+            <div class="service-option__card">
+              <h3>Reiki / Universal Healing</h3>
+              <p class="service-option__duration">60 minutes</p>
+              <p class="service-option__description">Gentle energy healing for relaxation and emotional balance.</p>
+              <p class="service-option__price">$85</p>
+            </div>
+          </label>
+
+          <label class="service-option fade-in-scale stagger-6">
+            <input type="radio" name="service" value="herbal">
+            <div class="service-option__card">
+              <h3>Herbal Consultation</h3>
+              <p class="service-option__duration">45 minutes</p>
+              <p class="service-option__description">Personalised herbal medicine consultation and prescription.</p>
+              <p class="service-option__price">$70</p>
+            </div>
+          </label>
+        </div>
+        <div class="booking-nav">
+          <button class="btn btn--primary" id="to-step-2" disabled>Continue to Select Time</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Calendar & Time Selection -->
+      <div class="booking-panel hidden" id="step-2">
+        <h2 class="booking-panel__title">Choose Your Appointment Time</h2>
+
+        <div class="calendar-container">
+          <div class="calendar">
+            <div class="calendar__header">
+              <button class="calendar__nav" id="prev-month">&larr;</button>
+              <h3 class="calendar__month" id="calendar-month">February 2025</h3>
+              <button class="calendar__nav" id="next-month">&rarr;</button>
+            </div>
+            <div class="calendar__weekdays">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+            </div>
+            <div class="calendar__days" id="calendar-days">
+              <!-- Days will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="time-slots">
+            <h3 class="time-slots__title">Available Times</h3>
+            <p class="time-slots__date" id="selected-date-display">Select a date to see available times</p>
+            <div class="time-slots__grid" id="time-slots-grid">
+              <!-- Time slots will be populated when date is selected -->
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-nav">
+          <button class="btn btn--secondary" id="back-to-step-1">Back</button>
+          <button class="btn btn--primary" id="to-step-3" disabled>Continue to Your Details</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Personal Details -->
+      <div class="booking-panel hidden" id="step-3">
+        <h2 class="booking-panel__title">Your Details</h2>
+
+        <form class="booking-form" id="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name *</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-email">Email *</label>
+              <input type="email" id="booking-email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-phone">Phone *</label>
+              <input type="tel" id="booking-phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-notes">Additional Notes (optional)</label>
+            <textarea id="booking-notes" name="notes" placeholder="Any health concerns or information you'd like us to know before your appointment..."></textarea>
+          </div>
+
+          <div class="form-group form-group--checkbox">
+            <label>
+              <input type="checkbox" id="first-visit" name="first-visit">
+              <span>This is my first visit to Charlotte Clinic</span>
+            </label>
+          </div>
+        </form>
+
+        <div class="booking-nav">
+          <button class="btn btn--secondary" id="back-to-step-2">Back</button>
+          <button class="btn btn--primary" id="to-step-4">Continue to Payment</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Confirmation & Payment -->
+      <div class="booking-panel hidden" id="step-4">
+        <h2 class="booking-panel__title">Confirm & Pay</h2>
+
+        <div class="booking-summary">
+          <h3>Booking Summary</h3>
+          <div class="booking-summary__details">
+            <div class="booking-summary__item">
+              <span class="booking-summary__label">Service:</span>
+              <span class="booking-summary__value" id="summary-service">Initial Consultation</span>
+            </div>
+            <div class="booking-summary__item">
+              <span class="booking-summary__label">Date:</span>
+              <span class="booking-summary__value" id="summary-date">Monday, 10 February 2025</span>
+            </div>
+            <div class="booking-summary__item">
+              <span class="booking-summary__label">Time:</span>
+              <span class="booking-summary__value" id="summary-time">10:00 AM</span>
+            </div>
+            <div class="booking-summary__item">
+              <span class="booking-summary__label">Duration:</span>
+              <span class="booking-summary__value" id="summary-duration">90 minutes</span>
+            </div>
+            <div class="booking-summary__item booking-summary__item--total">
+              <span class="booking-summary__label">Total:</span>
+              <span class="booking-summary__value" id="summary-price">$150</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-section">
+          <h3>Payment Details</h3>
+          <div class="payment-placeholder">
+            <div class="payment-placeholder__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <p class="payment-placeholder__text">Secure payment integration coming soon</p>
+            <p class="payment-placeholder__subtext">For now, payment will be collected at the clinic</p>
+
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="clinic" checked>
+                <span>Pay at Clinic</span>
+              </label>
+              <label class="payment-option payment-option--disabled">
+                <input type="radio" name="payment" value="online" disabled>
+                <span>Pay Online (Coming Soon)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-nav">
+          <button class="btn btn--secondary" id="back-to-step-3">Back</button>
+          <button class="btn btn--primary" id="confirm-booking">Confirm Booking</button>
+        </div>
+      </div>
+
+      <!-- Confirmation Success -->
+      <div class="booking-panel hidden" id="booking-success">
+        <div class="booking-success">
+          <div class="booking-success__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 12l3 3 5-6"/>
+            </svg>
+          </div>
+          <h2>Booking Confirmed!</h2>
+          <p>Thank you for booking with Charlotte Clinic.</p>
+          <p>A confirmation email has been sent to your email address with all the details of your appointment.</p>
+
+          <div class="booking-success__details">
+            <p><strong>What to bring:</strong></p>
+            <ul>
+              <li>Wear comfortable, loose-fitting clothing</li>
+              <li>Bring a list of any medications you're taking</li>
+              <li>Arrive 10 minutes early to complete paperwork</li>
+            </ul>
+          </div>
+
+          <a href="index.html" class="btn btn--primary">Return to Homepage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">Charlotte Clinic</a>
+        <ul class="footer__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="practitioners.html">Practitioners</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/charlottepowell_acupuncture/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Charlotte Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
