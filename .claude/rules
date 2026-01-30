@@ -32,6 +32,9 @@
 - Display full images rather than cropping when possible
 - Use `object-fit: contain` or adjust `aspect-ratio` to show complete images
 - Always provide alt text
+- Ensure image `src` paths correctly point to the `images/` directory
+- If images show 404 errors, check server logs and verify files exist locally
+- When an image is missing, confirm with user whether to add it or remove the reference
 
 ## Animations
 
@@ -48,3 +51,15 @@
 
 - Test responsive design thoroughly across device sizes
 - Verify mobile navigation works: toggle, escape, overlay click, scroll lock
+
+## Dev Server
+
+- Use `python3 -m http.server` (not `python` which may not exist)
+- If port 8000 is in use, try alternate ports: `python3 -m http.server 8080`
+- Check server logs for 404 errors when debugging missing assets
+
+## Deployment
+
+- Changes must be committed and pushed to Git to appear on deployed URLs (e.g., Vercel)
+- If merging is blocked by worktree conflicts, create a Pull Request as an alternative
+- After adding images locally, inform user of both the local path and localhost URL
