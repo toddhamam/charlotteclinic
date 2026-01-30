@@ -7,7 +7,7 @@ A static website for Charlotte's acupuncture clinic, built with vanilla HTML, CS
 - **HTML5** - Semantic markup with multi-page structure
 - **CSS3** - Custom properties for design tokens, modular organization
 - **Vanilla JavaScript** - No frameworks, progressive enhancement approach
-- **Python dev server** - Run with `python -m http.server`
+- **Python dev server** - Run with `python3 -m http.server` (use `python3` as `python` may not exist on some systems; try alternate ports like 8080 or 8081 if default port 8000 is in use)
 
 ## Project Structure
 
