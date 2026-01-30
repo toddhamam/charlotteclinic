@@ -1,0 +1,50 @@
+# Coding Rules
+
+## CSS
+
+- Use CSS custom properties for colors, spacing, and typography
+- Use `clamp(min, preferred, max)` for responsive typography on headings
+- Use `aspect-ratio` to maintain image placeholder dimensions
+- Organize styles by section with clear comment headers
+- Mobile-first: base styles for mobile, media queries for larger screens
+
+## JavaScript
+
+- Wrap all code in `DOMContentLoaded` event listener
+- Use `IntersectionObserver` for scroll-triggered animations
+- Keep dependencies minimal - vanilla JS preferred
+- Handle mobile navigation with: toggle states, escape key close, overlay, body scroll lock
+
+## Accessibility
+
+- Add ARIA attributes for interactive elements (accordion, navigation)
+- Use `aria-expanded` for expandable content
+- Include `aria-label` on icon-only buttons and links
+
+## Content & Tone
+
+- Write copy in first-person for Charlotte's voice ("I'm Charlotte...")
+- Keep headlines evocative and meaningful, not just functional
+- Prioritize readability: larger font sizes, good line heights
+
+## Images
+
+- Display full images rather than cropping when possible
+- Use `object-fit: contain` or adjust `aspect-ratio` to show complete images
+- Always provide alt text
+
+## Animations
+
+- Keep animations subtle: fades and gentle scales
+- Aim for tranquil, calming effects
+- Use CSS transitions or `IntersectionObserver` for scroll effects
+
+## Placeholders
+
+- Mark placeholder content clearly: `[Charlotte's Photo]`, `[Phone Number]`
+- Booking system has payment placeholder - integration not required for demo
+
+## Workflow
+
+- Test responsive design thoroughly across device sizes
+- Verify mobile navigation works: toggle, escape, overlay click, scroll lock
