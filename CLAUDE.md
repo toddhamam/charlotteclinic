@@ -1,6 +1,6 @@
-# Charlotte Clinic Website
+# The Qi Collective Website
 
-A static website for Charlotte's acupuncture clinic, built with vanilla HTML, CSS, and JavaScript.
+A static website for The Qi Collective acupuncture clinic (formerly Charlotte Clinic), built with vanilla HTML, CSS, and JavaScript.
 
 ## Tech Stack
 
@@ -13,7 +13,7 @@ A static website for Charlotte's acupuncture clinic, built with vanilla HTML, CS
 
 ```
 ├── index.html          # Homepage with hero, services, testimonials, FAQ
-├── about.html          # About Charlotte page
+├── about.html          # About page
 ├── services.html       # Services offered
 ├── specialties.html    # Treatment specialties
 ├── practitioners.html  # Practitioner profiles
@@ -30,8 +30,8 @@ A static website for Charlotte's acupuncture clinic, built with vanilla HTML, CS
 ## Design System
 
 **Color Palette:**
-- Sage green, cream, charcoal
-- Defined as CSS custom properties (e.g., `--color-cream`, `--color-sage`)
+- Teal (`--color-sage`), cream, charcoal, terracotta accents
+- Defined as CSS custom properties in `:root` - color changes are centralized here
 
 **Typography:**
 - Headings: Cormorant Garamond
@@ -52,7 +52,7 @@ A static website for Charlotte's acupuncture clinic, built with vanilla HTML, CS
 
 ## User Preferences
 
-- **Tone**: Personal, welcoming, first-person voice
+- **Tone**: Personal, welcoming, authentic practitioner voice
 - **Headlines**: Evocative, meaningful (not purely functional)
 - **Images**: Full display preferred over cropping
 - **Animations**: Subtle fades and scales, tranquil feel

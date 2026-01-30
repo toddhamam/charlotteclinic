@@ -7,6 +7,9 @@
 - Use `aspect-ratio` to maintain image placeholder dimensions
 - Organize styles by section with clear comment headers
 - Mobile-first: base styles for mobile, media queries for larger screens
+- Use utility classes for common patterns: `.container`, `.text-center`, `.section-padding`
+- Follow BEM-like naming: `nav__list`, `service-card__title`
+- Global `box-sizing: border-box;` is set - rely on it for consistent sizing
 
 ## JavaScript
 
@@ -14,16 +17,18 @@
 - Use `IntersectionObserver` for scroll-triggered animations
 - Keep dependencies minimal - vanilla JS preferred
 - Handle mobile navigation with: toggle states, escape key close, overlay, body scroll lock
+- Booking portal uses `.hidden` class and `data-step` attributes for multi-step state management
 
 ## Accessibility
 
 - Add ARIA attributes for interactive elements (accordion, navigation)
 - Use `aria-expanded` for expandable content
 - Include `aria-label` on icon-only buttons and links
+- Use `@media (prefers-reduced-motion: reduce)` to disable animations for users who prefer reduced motion
 
 ## Content & Tone
 
-- Write copy in first-person for Charlotte's voice ("I'm Charlotte...")
+- Write copy in first-person, authentic practitioner voice
 - Keep headlines evocative and meaningful, not just functional
 - Prioritize readability: larger font sizes, good line heights
 
@@ -44,13 +49,16 @@
 
 ## Placeholders
 
-- Mark placeholder content clearly: `[Charlotte's Photo]`, `[Phone Number]`
+- Mark placeholder content clearly: `[Practitioner Photo]`, `[Phone Number]`
 - Booking system has payment placeholder - integration not required for demo
 
 ## Workflow
 
 - Test responsive design thoroughly across device sizes
 - Verify mobile navigation works: toggle, escape, overlay click, scroll lock
+- For rebranding/style changes: only change colors and brand name; preserve all functionality, animations, and layout
+- Batch file updates efficiently - avoid updating the same file multiple times
+- When extracting colors from external sites, ask for explicit hex values rather than trying to parse from URLs
 
 ## Dev Server
 
