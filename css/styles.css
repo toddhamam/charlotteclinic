@@ -5,13 +5,13 @@
 
 /* CSS Custom Properties (Design Tokens) */
 :root {
-  /* Colors */
+  /* Colors - The Qi Collective Brand */
   --color-cream: #FAF8F5;
-  --color-cream-dark: #F5F1EB;
-  --color-sage: #8B9D83;
-  --color-sage-light: #A8B8A0;
-  --color-sage-dark: #6B7D63;
-  --color-terracotta: #C4A484;
+  --color-cream-dark: #F0EDE8;
+  --color-sage: #398280;
+  --color-sage-light: #5A9E9C;
+  --color-sage-dark: #2A6362;
+  --color-terracotta: #B8956E;
   --color-terracotta-light: #D4BCA0;
   --color-charcoal: #3D3D3D;
   --color-charcoal-light: #5D5D5D;
