@@ -89,6 +89,16 @@ charlotteclinic/
 └── README.md           # This file
 ```
 
+## Changelog
+
+### Ocean Video Hero Background
+- Added a subtle looping ocean video background to the homepage hero section
+- Video sourced from Mixkit (free commercial license) showing gentle sunlight shimmering on water
+- Teal-tinted gradient overlay preserves brand consistency and text readability
+- Hero text updated to white/cream for contrast against the dark video background
+- Respects `prefers-reduced-motion`: video is hidden and replaced with a static gradient for users who prefer reduced motion
+- Video file: `images/ocean-bg.mp4` (~5 MB, 15s loop, 720p landscape)
+
 ## Development Notes
 
 - Site should be easily maintainable by non-developers
