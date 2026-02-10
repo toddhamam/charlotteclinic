@@ -209,16 +209,40 @@ a:hover {
   justify-content: center;
   text-align: center;
   padding-top: 80px;
+  background: var(--color-charcoal);
+  overflow: hidden;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     180deg,
-    var(--color-cream) 0%,
-    var(--color-cream-dark) 100%
+    rgba(57, 130, 128, 0.25) 0%,
+    rgba(42, 99, 98, 0.4) 100%
   );
+  z-index: 2;
 }
 
 .hero__content {
   max-width: 800px;
   padding: var(--space-md);
+  position: relative;
+  z-index: 3;
 }
 
 .hero__subtitle {
@@ -226,17 +250,18 @@ a:hover {
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-sage);
+  color: var(--color-cream);
   margin-bottom: var(--space-sm);
 }
 
 .hero__title {
   margin-bottom: var(--space-md);
+  color: var(--color-white);
 }
 
 .hero__description {
   font-size: 1.25rem;
-  color: var(--color-charcoal-light);
+  color: rgba(250, 248, 245, 0.85);
   max-width: 600px;
   margin: 0 auto var(--space-md);
 }
@@ -1765,9 +1790,10 @@ a:hover {
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(ellipse at 20% 80%, rgba(139, 157, 131, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(196, 164, 132, 0.06) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 80%, rgba(57, 130, 128, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(184, 149, 110, 0.1) 0%, transparent 50%);
   pointer-events: none;
+  z-index: 2;
 }
 
 /* Soft texture for interests section */
@@ -2168,6 +2194,14 @@ a:hover {
   .hero .btn {
     animation: none;
     opacity: 1;
+  }
+
+  .hero__video {
+    display: none;
+  }
+
+  .hero {
+    background: linear-gradient(180deg, var(--color-sage-dark) 0%, var(--color-charcoal) 100%);
   }
 
   html {
