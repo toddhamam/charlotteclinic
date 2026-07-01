@@ -91,6 +91,14 @@ charlotteclinic/
 
 ## Changelog
 
+### Brand Logo Refresh (Gold Hover Retained)
+- Introduced the new "The Qi Collective" logo across all seven pages (header and footer)
+- Added an inline SVG "ripple" mark — nested concentric circles inside an open enso — rendered in brand teal, so it scales crisply at any size and keeps a transparent background
+- Rebuilt the wordmark as live text so "Qi" reads in teal while "The" and "Collective" stay charcoal, matching the supplied artwork
+- Retained the signature interaction: the charcoal wordmark transitions to gold on hover, while the teal "Qi" and the ripple mark stay teal
+- Added a reusable `--color-gold` (#C9A24B) design token for the hover state
+- Footer logo mirrors the header treatment, recoloured for the dark background (light-teal mark and "Qi", cream wordmark)
+
 ### Ocean Video Hero Background
 - Added a subtle looping ocean video background to the homepage hero section
 - Video sourced from Mixkit (free commercial license) showing gentle sunlight shimmering on water
