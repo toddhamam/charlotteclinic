@@ -13,6 +13,7 @@
   --color-sage-dark: #2A6362;
   --color-terracotta: #B8956E;
   --color-terracotta-light: #D4BCA0;
+  --color-gold: #C9A24B;
   --color-charcoal: #3D3D3D;
   --color-charcoal-light: #5D5D5D;
   --color-white: #FFFFFF;
@@ -138,14 +139,32 @@ a:hover {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--font-heading);
   font-size: 1.5rem;
+  font-weight: 500;
   color: var(--color-charcoal);
   letter-spacing: 0.05em;
+  transition: color var(--transition-smooth);
 }
 
-.logo span {
+.logo__mark {
+  height: 2.3rem;
+  width: auto;
+  flex-shrink: 0;
+  stroke: var(--color-sage);
+}
+
+.logo__accent {
   color: var(--color-sage);
+}
+
+/* Retain brand feature: the charcoal wordmark turns gold on hover,
+   while the teal "Qi" and the ripple mark stay teal. */
+.logo:hover {
+  color: var(--color-gold);
 }
 
 .nav__list {
@@ -551,9 +570,27 @@ a:hover {
 }
 
 .footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-heading);
   font-size: 1.25rem;
+  font-weight: 500;
   color: var(--color-cream);
+  transition: color var(--transition-smooth);
+}
+
+.footer__logo .logo__mark {
+  height: 1.9rem;
+  stroke: var(--color-sage-light);
+}
+
+.footer__logo .logo__accent {
+  color: var(--color-sage-light);
+}
+
+.footer__logo:hover {
+  color: var(--color-gold);
 }
 
 .footer__links {
