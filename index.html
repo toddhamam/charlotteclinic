@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Qi Collective - Acupuncture and Chinese Medicine in Brisbane. AHPRA registered practitioner offering acupuncture, herbal medicine, cupping, and holistic healing.">
-  <title>The Qi Collective | Acupuncture & Chinese Medicine Brisbane</title>
+  <meta name="description" content="The Qi Collective - Acupuncture and Chinese Medicine in Rose Park, Adelaide. A multidisciplinary team offering acupuncture, herbal medicine, cupping, and holistic care.">
+  <title>The Qi Collective | Acupuncture &amp; Chinese Medicine Adelaide</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -37,7 +37,17 @@
         <ul class="nav__list">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link">Practitioners</a></li>
-          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li class="nav__item--dropdown">
+            <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+              Services <span class="nav__dropdown-icon" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="services-menu">
+              <li><a href="services.html" class="nav__dropdown-link">Services</a></li>
+              <li><a href="booking.html" class="nav__dropdown-link">Appointments</a></li>
+              <li><a href="contact.html?subject=movement" class="nav__dropdown-link">Movement</a></li>
+              <li><a href="contact.html?subject=workshops" class="nav__dropdown-link">Education/Workshops</a></li>
+            </ul>
+          </li>
           <li><a href="specialties.html" class="nav__link">Specialties</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
           <li class="nav__item--mobile"><a href="booking.html" class="btn btn--primary btn--small">Book Appointment</a></li>
@@ -54,7 +64,7 @@
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__subtitle">Acupuncture & Chinese Medicine</p>
+      <p class="hero__subtitle">Acupuncture &amp; Chinese Medicine</p>
       <h1 class="hero__title">Where Energy Flows,<br>Healing Follows.</h1>
       <p class="hero__description">
         Release what blocks you. Restore what sustains you. In this compassionate space,
@@ -72,31 +82,36 @@
           <img src="images/charlotte.webp" alt="Charlotte Powell - Acupuncturist and Traditional Chinese Medicine practitioner">
         </div>
         <div class="about__content fade-in-right">
-          <h2>Welcome</h2>
+          <h2>WELCOME TO THE QI COLLECTIVE</h2>
           <p>
-            I'm Charlotte, a qualified Acupuncturist and Traditional Chinese Medicine
-            practitioner, as well as a Reiki practitioner. I'm deeply passionate about
-            holistic health care and providing an open, empathetic space where you feel
-            safe, supported, seen and heard.
+            Located in Rose Park, Adelaide, The Qi Collective brings together a team of
+            multidisciplinary practitioners who are committed to creating a space for you
+            to rest, heal, learn, grow and understand yourself and your innate health and
+            wellbeing on a deeper level.
           </p>
           <p>
-            I believe that health extends beyond our physical body to our mental, emotional
-            and energetic selves—and that true healing often requires understanding all
-            these aspects of what makes us human. Each treatment I offer is tailored
-            specifically to you, because we are all unique and constantly in a state of
-            change and flow.
+            Our Practitioners work on the basis that understanding true health and wellbeing
+            means understanding and addressing all aspects of the human being and will work
+            with you to connect the dots, understand yourself on a deeper level and move
+            forward to a more balanced, healthier state.
           </p>
-          <p>
-            I'll work with you to uncover underlying blockages and focus on the root cause,
-            helping you peel back the layers as you move towards a more vibrant state of
-            wellbeing. I believe we all deserve to feel optimally healthy.
-          </p>
-          <div class="credentials">
-            <span class="credential-badge">AHPRA Registered</span>
-            <span class="credential-badge">AACMA Member</span>
-            <span class="credential-badge">Reiki Practitioner</span>
-          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission section-padding">
+    <div class="container">
+      <div class="mission__inner fade-in">
+        <h2>OUR MISSION</h2>
+        <p>
+          To provide Adelaide with a holistic, high vibrational wellness space with exceptional
+          practitioners committed to the holistic health and wellbeing of their patients. We strive
+          to create the opportunity for more clients to receive care from experienced, intuitive,
+          knowledgeable and deeply empathetic practitioners and to create a space where people feel
+          safe, held and understood.
+        </p>
       </div>
     </div>
   </section>
@@ -158,54 +173,6 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials section-padding">
-    <div class="container">
-      <div class="testimonials__header fade-in">
-        <h2>What Our Clients Say</h2>
-        <p>Real experiences from real people on their healing journey</p>
-      </div>
-      <div class="testimonials__grid">
-        <div class="testimonial-card fade-in-scale stagger-1">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "Charlotte creates such a warm, welcoming space. After years of struggling with anxiety,
-            I finally feel like I have tools to manage it. The combination of acupuncture and her
-            gentle approach has been life-changing."
-          </blockquote>
-          <div class="testimonial-card__author">
-            <span class="testimonial-card__name">Sarah M.</span>
-            <span class="testimonial-card__treatment">Anxiety & Stress Management</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card fade-in-scale stagger-2">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "I was skeptical about acupuncture at first, but Charlotte made me feel so comfortable.
-            My chronic back pain has improved significantly after just a few sessions. Highly recommend!"
-          </blockquote>
-          <div class="testimonial-card__author">
-            <span class="testimonial-card__name">Michael T.</span>
-            <span class="testimonial-card__treatment">Chronic Pain Relief</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card fade-in-scale stagger-3">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "Charlotte supported me throughout my pregnancy journey. Her knowledge and care during
-            the peri-natal period was invaluable. I felt truly seen and heard at every appointment."
-          </blockquote>
-          <div class="testimonial-card__author">
-            <span class="testimonial-card__name">Emma L.</span>
-            <span class="testimonial-card__treatment">Pregnancy Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Special Interests Section -->
   <section id="specialties" class="interests section-padding">
     <div class="container">
@@ -225,7 +192,7 @@
             <path d="M24 42c-8-6-16-12-16-20a10 10 0 0116-8 10 10 0 0116 8c0 8-8 14-16 20z"/>
             <path d="M18 22c2-1 4-1 6 1s4 2 6 1" opacity="0.6"/>
           </svg>
-          <h3>Mental & Emotional</h3>
+          <h3>Mental &amp; Emotional</h3>
           <p>Gentle support for anxiety, stress, and emotional wellness.</p>
         </div>
         <div class="interest-item fade-in stagger-3">
@@ -260,7 +227,7 @@
       </div>
       <div class="faq__list">
         <div class="faq-item fade-in">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" type="button" aria-expanded="false">
             <span>What conditions do you treat?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 9l6 6 6-6"/>
@@ -270,7 +237,7 @@
             <p>I welcome any and all ailments into the treatment room, however I have a particular interest in:</p>
             <ul>
               <li>Women's health</li>
-              <li>Pregnancy + pre & post-natal care</li>
+              <li>Pregnancy + pre &amp; post-natal care</li>
               <li>Fertility</li>
               <li>Mental health — anxiety, depression, stress, insomnia</li>
               <li>Digestive disorders</li>
@@ -281,7 +248,7 @@
         </div>
 
         <div class="faq-item fade-in">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" type="button" aria-expanded="false">
             <span>Does acupuncture hurt?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 9l6 6 6-6"/>
@@ -294,7 +261,7 @@
         </div>
 
         <div class="faq-item fade-in">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" type="button" aria-expanded="false">
             <span>Do I have to have needles?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 9l6 6 6-6"/>
@@ -306,7 +273,7 @@
         </div>
 
         <div class="faq-item fade-in">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" type="button" aria-expanded="false">
             <span>Do you accept Private Health Insurance?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 9l6 6 6-6"/>
@@ -318,7 +285,7 @@
         </div>
 
         <div class="faq-item fade-in">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" type="button" aria-expanded="false">
             <span>Should I book a 60min or 45min follow-up?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 9l6 6 6-6"/>
@@ -331,7 +298,7 @@
         </div>
 
         <div class="faq-item fade-in">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" type="button" aria-expanded="false">
             <span>Do you treat newborns and can I bring my child?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 9l6 6 6-6"/>
@@ -376,7 +343,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 The Qi Collective. All rights reserved.</p>
+        <p>&copy; 2026 The Qi Collective. All rights reserved.</p>
       </div>
     </div>
   </footer>

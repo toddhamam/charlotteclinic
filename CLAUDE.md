@@ -12,7 +12,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 ## Project Structure
 
 ```
-├── index.html          # Homepage with hero, services, testimonials, FAQ
+├── index.html          # Homepage with hero, welcome, mission, services, and FAQ
 ├── about.html          # About page
 ├── services.html       # Services offered
 ├── specialties.html    # Treatment specialties
@@ -47,7 +47,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 - `IntersectionObserver` for scroll-triggered animations
 - `DOMContentLoaded` wrapper for all JS
 - Mobile-first responsive design with grid stacking
-- ARIA attributes for accessibility (FAQ accordion, navigation)
+- Accessible desktop/mobile Services dropdown and FAQ accordion
 - SVG icons for scalability
 
 ## User Preferences

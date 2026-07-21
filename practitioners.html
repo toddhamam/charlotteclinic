@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet the practitioners at The Qi Collective - Our team of qualified acupuncturists and Chinese medicine practitioners in Brisbane.">
+  <meta name="description" content="Meet the practitioners at The Qi Collective - Our team of qualified acupuncturists and Chinese medicine practitioners in Rose Park, Adelaide.">
   <title>Our Practitioners | The Qi Collective</title>
 
   <!-- Fonts -->
@@ -29,7 +29,7 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -37,7 +37,17 @@
         <ul class="nav__list">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link nav__link--active">Practitioners</a></li>
-          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li class="nav__item--dropdown">
+            <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+              Services <span class="nav__dropdown-icon" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="services-menu">
+              <li><a href="services.html" class="nav__dropdown-link">Services</a></li>
+              <li><a href="booking.html" class="nav__dropdown-link">Appointments</a></li>
+              <li><a href="contact.html?subject=movement" class="nav__dropdown-link">Movement</a></li>
+              <li><a href="contact.html?subject=workshops" class="nav__dropdown-link">Education/Workshops</a></li>
+            </ul>
+          </li>
           <li><a href="specialties.html" class="nav__link">Specialties</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
           <li class="nav__item--mobile"><a href="booking.html" class="btn btn--primary btn--small">Book Appointment</a></li>
@@ -74,7 +84,7 @@
           </div>
           <div class="practitioner-card__content">
             <h2>Charlotte Powell</h2>
-            <p class="practitioner-card__title">Principal Practitioner</p>
+            <p class="practitioner-card__title">Acupuncturist / Chinese Herbal Medicine / Universal Healing Practitioner (Reiki)</p>
             <p class="practitioner-card__specialties">
               <strong>Specialties:</strong> Women's Health, Mental/Emotional Health, Peri-Natal Care
             </p>
@@ -92,55 +102,87 @@
               <span class="credential-badge">AHPRA Registered</span>
               <span class="credential-badge">AACMA Member</span>
               <span class="credential-badge">CMBA Registered</span>
-              <span class="credential-badge">Reiki Practitioner</span>
             </div>
           </div>
         </div>
 
-        <!-- Practitioner 2: Placeholder -->
+        <!-- Practitioner 2: Annabelle -->
         <div class="practitioner-card fade-in">
           <div class="practitioner-card__image">
-            <div class="practitioner-card__image-placeholder">
-              [Practitioner Photo]
-            </div>
+            <img src="images/annabelle-boehm.jpg" alt="Annabelle Boehm - Acupuncturist and Universal Healing Practitioner">
           </div>
           <div class="practitioner-card__content">
-            <h2>[Practitioner Name]</h2>
-            <p class="practitioner-card__title">[Title/Role]</p>
+            <h2>Annabelle Boehm</h2>
+            <p class="practitioner-card__title">Acupuncturist / Universal Healing Practitioner (Reiki)</p>
             <p class="practitioner-card__specialties">
-              <strong>Specialties:</strong> [Areas of specialty]
-            </p>
-            <p class="practitioner-card__bio">
-              [Practitioner bio and background. Include their journey to Chinese medicine,
-              their approach to treatment, and what drives their practice.]
+              <strong>Specialties:</strong> Women's health, Hormonal Balance, Fertility, Pregnancy,
+              Skin concerns, Digestive issues, Pain management, and Overall well-being.
             </p>
             <div class="practitioner-card__credentials">
-              <span class="credential-badge">[Credential]</span>
-              <span class="credential-badge">[Credential]</span>
+              <span class="credential-badge">AHPRA Registered</span>
+              <span class="credential-badge">AACMA Member</span>
+              <span class="credential-badge">CMBA Registered</span>
             </div>
           </div>
         </div>
 
-        <!-- Practitioner 3: Placeholder -->
+        <!-- Practitioner 3: Kate -->
         <div class="practitioner-card fade-in">
           <div class="practitioner-card__image">
-            <div class="practitioner-card__image-placeholder">
-              [Practitioner Photo]
+            <img src="images/kate-oleary.jpg" alt="Kate O'Leary - Acupuncturist, Universal Healing Practitioner, and Yoga Facilitator">
+          </div>
+          <div class="practitioner-card__content">
+            <h2>Kate O'Leary</h2>
+            <p class="practitioner-card__title">Acupuncturist / Universal Healing Practitioner (Reiki), and Yoga Facilitator</p>
+            <p class="practitioner-card__specialties">
+              <strong>Special interests:</strong> Women's Health, Perinatal, Autoimmune,
+              Gastrointestinal, and Chronic Conditions.
+            </p>
+            <div class="practitioner-card__credentials">
+              <span class="credential-badge">AHPRA Registered</span>
+              <span class="credential-badge">AACMA Member</span>
+              <span class="credential-badge">CMBA Registered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practitioner 4: Emily -->
+        <div class="practitioner-card fade-in">
+          <div class="practitioner-card__image">
+            <div class="practitioner-card__image-placeholder" role="img" aria-label="Portrait of Emily Floreani coming soon">
+              Photo coming soon
             </div>
           </div>
           <div class="practitioner-card__content">
-            <h2>[Practitioner Name]</h2>
-            <p class="practitioner-card__title">[Title/Role]</p>
+            <h2>Emily Floreani</h2>
+            <p class="practitioner-card__title">Acupuncturist / Chinese Herbal Medicine / Universal Healing Practitioner (Reiki) / Yoga Facilitator</p>
             <p class="practitioner-card__specialties">
-              <strong>Specialties:</strong> [Areas of specialty]
-            </p>
-            <p class="practitioner-card__bio">
-              [Practitioner bio and background. Include their journey to Chinese medicine,
-              their approach to treatment, and what drives their practice.]
+              <strong>Special interests:</strong> Women's Health, Hormonal and emotional wellbeing,
+              Digestive health, Nervous system regulation, Stress management, and supporting people
+              to optimise their health naturally.
             </p>
             <div class="practitioner-card__credentials">
-              <span class="credential-badge">[Credential]</span>
-              <span class="credential-badge">[Credential]</span>
+              <span class="credential-badge">AHPRA Registered</span>
+              <span class="credential-badge">AACMA Member</span>
+              <span class="credential-badge">CMBA Registered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practitioner 5: Samara -->
+        <div class="practitioner-card fade-in">
+          <div class="practitioner-card__image">
+            <div class="practitioner-card__image-placeholder" role="img" aria-label="Portrait of Samara Holliday coming soon">
+              Photo coming soon
+            </div>
+          </div>
+          <div class="practitioner-card__content">
+            <h2>Samara Holliday</h2>
+            <p class="practitioner-card__title">Acupuncturist</p>
+            <div class="practitioner-card__credentials">
+              <span class="credential-badge">AHPRA Registered</span>
+              <span class="credential-badge">AACMA Member</span>
+              <span class="credential-badge">CMBA Registered</span>
             </div>
           </div>
         </div>
@@ -184,7 +226,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 The Qi Collective. All rights reserved.</p>
+        <p>&copy; 2026 The Qi Collective. All rights reserved.</p>
       </div>
     </div>
   </footer>

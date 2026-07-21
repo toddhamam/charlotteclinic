@@ -29,7 +29,7 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -37,7 +37,17 @@
         <ul class="nav__list">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link">Practitioners</a></li>
-          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li class="nav__item--dropdown">
+            <button class="nav__link nav__link--active nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+              Services <span class="nav__dropdown-icon" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="services-menu">
+              <li><a href="services.html" class="nav__dropdown-link">Services</a></li>
+              <li><a href="booking.html" class="nav__dropdown-link nav__dropdown-link--active">Appointments</a></li>
+              <li><a href="contact.html?subject=movement" class="nav__dropdown-link">Movement</a></li>
+              <li><a href="contact.html?subject=workshops" class="nav__dropdown-link">Education/Workshops</a></li>
+            </ul>
+          </li>
           <li><a href="specialties.html" class="nav__link">Specialties</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
           <li class="nav__item--mobile"><a href="booking.html" class="btn btn--primary btn--small">Book Appointment</a></li>
@@ -74,7 +84,7 @@
         </div>
         <div class="booking-step" data-step="4">
           <span class="booking-step__number">4</span>
-          <span class="booking-step__label">Confirm & Pay</span>
+          <span class="booking-step__label">Confirm &amp; Pay</span>
         </div>
       </div>
 
@@ -82,68 +92,68 @@
       <div class="booking-panel" id="step-1">
         <h2 class="booking-panel__title fade-in">Select Your Service</h2>
         <div class="service-selection">
-          <label class="service-option fade-in-scale stagger-1">
-            <input type="radio" name="service" value="initial-consultation">
-            <div class="service-option__card">
-              <h3>Initial Consultation</h3>
-              <p class="service-option__duration">90 minutes</p>
-              <p class="service-option__description">Comprehensive first visit including health assessment, diagnosis, and treatment.</p>
-              <p class="service-option__price">$150</p>
-            </div>
-          </label>
+          <div class="service-option fade-in-scale stagger-1">
+            <input type="radio" id="service-initial-consultation" name="service" value="initial-consultation">
+            <label class="service-option__card" for="service-initial-consultation">
+              <span class="service-option__title">Initial Consultation</span>
+              <span class="service-option__duration">90 minutes</span>
+              <span class="service-option__description">Comprehensive first visit including health assessment, diagnosis, and treatment.</span>
+              <span class="service-option__price">$150</span>
+            </label>
+          </div>
 
-          <label class="service-option fade-in-scale stagger-2">
-            <input type="radio" name="service" value="acupuncture">
-            <div class="service-option__card">
-              <h3>Acupuncture Session</h3>
-              <p class="service-option__duration">60 minutes</p>
-              <p class="service-option__description">Follow-up acupuncture treatment tailored to your ongoing care plan.</p>
-              <p class="service-option__price">$95</p>
-            </div>
-          </label>
+          <div class="service-option fade-in-scale stagger-2">
+            <input type="radio" id="service-acupuncture" name="service" value="acupuncture">
+            <label class="service-option__card" for="service-acupuncture">
+              <span class="service-option__title">Acupuncture Session</span>
+              <span class="service-option__duration">60 minutes</span>
+              <span class="service-option__description">Follow-up acupuncture treatment tailored to your ongoing care plan.</span>
+              <span class="service-option__price">$95</span>
+            </label>
+          </div>
 
-          <label class="service-option fade-in-scale stagger-3">
-            <input type="radio" name="service" value="cupping">
-            <div class="service-option__card">
-              <h3>Cupping Therapy</h3>
-              <p class="service-option__duration">45 minutes</p>
-              <p class="service-option__description">Therapeutic cupping to release tension and promote circulation.</p>
-              <p class="service-option__price">$75</p>
-            </div>
-          </label>
+          <div class="service-option fade-in-scale stagger-3">
+            <input type="radio" id="service-cupping" name="service" value="cupping">
+            <label class="service-option__card" for="service-cupping">
+              <span class="service-option__title">Cupping Therapy</span>
+              <span class="service-option__duration">45 minutes</span>
+              <span class="service-option__description">Therapeutic cupping to release tension and promote circulation.</span>
+              <span class="service-option__price">$75</span>
+            </label>
+          </div>
 
-          <label class="service-option fade-in-scale stagger-4">
-            <input type="radio" name="service" value="cosmetic">
-            <div class="service-option__card">
-              <h3>Cosmetic Acupuncture</h3>
-              <p class="service-option__duration">75 minutes</p>
-              <p class="service-option__description">Natural facial rejuvenation treatment for a refreshed appearance.</p>
-              <p class="service-option__price">$120</p>
-            </div>
-          </label>
+          <div class="service-option fade-in-scale stagger-4">
+            <input type="radio" id="service-cosmetic" name="service" value="cosmetic">
+            <label class="service-option__card" for="service-cosmetic">
+              <span class="service-option__title">Cosmetic Acupuncture</span>
+              <span class="service-option__duration">75 minutes</span>
+              <span class="service-option__description">Natural facial rejuvenation treatment for a refreshed appearance.</span>
+              <span class="service-option__price">$120</span>
+            </label>
+          </div>
 
-          <label class="service-option fade-in-scale stagger-5">
-            <input type="radio" name="service" value="reiki">
-            <div class="service-option__card">
-              <h3>Reiki / Universal Healing</h3>
-              <p class="service-option__duration">60 minutes</p>
-              <p class="service-option__description">Gentle energy healing for relaxation and emotional balance.</p>
-              <p class="service-option__price">$85</p>
-            </div>
-          </label>
+          <div class="service-option fade-in-scale stagger-5">
+            <input type="radio" id="service-reiki" name="service" value="reiki">
+            <label class="service-option__card" for="service-reiki">
+              <span class="service-option__title">Reiki / Universal Healing</span>
+              <span class="service-option__duration">60 minutes</span>
+              <span class="service-option__description">Gentle energy healing for relaxation and emotional balance.</span>
+              <span class="service-option__price">$85</span>
+            </label>
+          </div>
 
-          <label class="service-option fade-in-scale stagger-6">
-            <input type="radio" name="service" value="herbal">
-            <div class="service-option__card">
-              <h3>Herbal Consultation</h3>
-              <p class="service-option__duration">45 minutes</p>
-              <p class="service-option__description">Personalised herbal medicine consultation and prescription.</p>
-              <p class="service-option__price">$70</p>
-            </div>
-          </label>
+          <div class="service-option fade-in-scale stagger-6">
+            <input type="radio" id="service-herbal" name="service" value="herbal">
+            <label class="service-option__card" for="service-herbal">
+              <span class="service-option__title">Herbal Consultation</span>
+              <span class="service-option__duration">45 minutes</span>
+              <span class="service-option__description">Personalised herbal medicine consultation and prescription.</span>
+              <span class="service-option__price">$70</span>
+            </label>
+          </div>
         </div>
         <div class="booking-nav">
-          <button class="btn btn--primary" id="to-step-2" disabled>Continue to Select Time</button>
+          <button class="btn btn--primary" type="button" id="to-step-2" disabled>Continue to Select Time</button>
         </div>
       </div>
 
@@ -154,9 +164,9 @@
         <div class="calendar-container">
           <div class="calendar">
             <div class="calendar__header">
-              <button class="calendar__nav" id="prev-month">&larr;</button>
+              <button class="calendar__nav" type="button" id="prev-month">&larr;</button>
               <h3 class="calendar__month" id="calendar-month">February 2025</h3>
-              <button class="calendar__nav" id="next-month">&rarr;</button>
+              <button class="calendar__nav" type="button" id="next-month">&rarr;</button>
             </div>
             <div class="calendar__weekdays">
               <span>Mon</span>
@@ -182,8 +192,8 @@
         </div>
 
         <div class="booking-nav">
-          <button class="btn btn--secondary" id="back-to-step-1">Back</button>
-          <button class="btn btn--primary" id="to-step-3" disabled>Continue to Your Details</button>
+          <button class="btn btn--secondary" type="button" id="back-to-step-1">Back</button>
+          <button class="btn btn--primary" type="button" id="to-step-3" disabled>Continue to Your Details</button>
         </div>
       </div>
 
@@ -228,14 +238,14 @@
         </form>
 
         <div class="booking-nav">
-          <button class="btn btn--secondary" id="back-to-step-2">Back</button>
-          <button class="btn btn--primary" id="to-step-4">Continue to Payment</button>
+          <button class="btn btn--secondary" type="button" id="back-to-step-2">Back</button>
+          <button class="btn btn--primary" type="submit" form="booking-form" id="to-step-4">Continue to Payment</button>
         </div>
       </div>
 
       <!-- Step 4: Confirmation & Payment -->
       <div class="booking-panel hidden" id="step-4">
-        <h2 class="booking-panel__title">Confirm & Pay</h2>
+        <h2 class="booking-panel__title">Confirm &amp; Pay</h2>
 
         <div class="booking-summary">
           <h3>Booking Summary</h3>
@@ -289,8 +299,8 @@
         </div>
 
         <div class="booking-nav">
-          <button class="btn btn--secondary" id="back-to-step-3">Back</button>
-          <button class="btn btn--primary" id="confirm-booking">Confirm Booking</button>
+          <button class="btn btn--secondary" type="button" id="back-to-step-3">Back</button>
+          <button class="btn btn--primary" type="button" id="confirm-booking">Confirm Booking</button>
         </div>
       </div>
 
@@ -352,7 +362,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 The Qi Collective. All rights reserved.</p>
+        <p>&copy; 2026 The Qi Collective. All rights reserved.</p>
       </div>
     </div>
   </footer>

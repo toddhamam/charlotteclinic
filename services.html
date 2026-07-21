@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Services at The Qi Collective - Acupuncture, herbal medicine, cupping therapy, and cosmetic acupuncture in Brisbane.">
+  <meta name="description" content="Services at The Qi Collective in Rose Park, Adelaide - acupuncture, Chinese herbal medicine, cupping, dietetics, cosmetic and paediatric acupuncture, and Reiki.">
   <title>Services | The Qi Collective</title>
 
   <!-- Fonts -->
@@ -29,7 +29,7 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -37,7 +37,17 @@
         <ul class="nav__list">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link">Practitioners</a></li>
-          <li><a href="services.html" class="nav__link nav__link--active">Services</a></li>
+          <li class="nav__item--dropdown">
+            <button class="nav__link nav__link--active nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+              Services <span class="nav__dropdown-icon" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="services-menu">
+              <li><a href="services.html" class="nav__dropdown-link nav__dropdown-link--active">Services</a></li>
+              <li><a href="booking.html" class="nav__dropdown-link">Appointments</a></li>
+              <li><a href="contact.html?subject=movement" class="nav__dropdown-link">Movement</a></li>
+              <li><a href="contact.html?subject=workshops" class="nav__dropdown-link">Education/Workshops</a></li>
+            </ul>
+          </li>
           <li><a href="specialties.html" class="nav__link">Specialties</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
           <li class="nav__item--mobile"><a href="booking.html" class="btn btn--primary btn--small">Book Appointment</a></li>
@@ -69,35 +79,29 @@
           <div class="service-detail__content">
             <h2>Acupuncture</h2>
             <p>
-              Acupuncture is the cornerstone of Traditional Chinese Medicine. Fine, sterile needles
-              are placed at specific points along the body's meridians to restore the flow of Qi
-              (vital energy), promoting natural healing and balance throughout the body.
+              Acupuncture is a practice of TCM and involves the insertion of fine needles into
+              specific points on the skin, located at various locations around the body. The points
+              chosen are specific to the receiver and the underlying pattern being treated. Acu-points
+              are found along meridians (channels of vital energy flow) throughout the body. The
+              meridians are all interconnected and also connect our external to our internal organs,
+              joints, sinews, tendons etc. Acupuncture works to re-establish flow and balance within
+              the body, removing blockages, tonifying deficiencies and reducing excesses to assist
+              the receiver's overall state of well-being.
             </p>
-            <p>
-              This ancient practice can help with a wide range of conditions including pain management,
-              stress and anxiety, digestive issues, sleep problems, and women's health concerns.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-detail fade-in">
-          <div class="service-detail__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <div class="service-detail__content">
-            <h2>Herbal Medicine</h2>
-            <p>
-              Chinese herbal medicine uses natural plant, mineral, and animal substances to
-              create customised formulas that address your specific health needs. These formulas
-              are carefully prescribed to complement your acupuncture treatments.
-            </p>
-            <p>
-              Combined with Chinese dietary advice, herbal medicine supports long-term wellness
-              and helps maintain the benefits of your treatments between sessions.
-            </p>
+            <p>Acupuncture may assist with conditions such as:</p>
+            <ul class="service-detail__list">
+              <li>Women's health / Men's health</li>
+              <li>Digestive issues</li>
+              <li>Mental health</li>
+              <li>Insomnia</li>
+              <li>Respiratory issues</li>
+              <li>Skin conditions</li>
+              <li>Hay fever / allergies</li>
+              <li>Pregnancy</li>
+              <li>Fertility</li>
+              <li>Paediatrics</li>
+              <li>And more</li>
+            </ul>
           </div>
         </div>
 
@@ -109,16 +113,55 @@
             </svg>
           </div>
           <div class="service-detail__content">
-            <h2>Cupping Therapy</h2>
+            <h2>Cupping</h2>
             <p>
-              Cupping therapy uses glass or silicone cups to create suction on the skin,
-              helping to move stagnant blood, release muscle tension, and remove toxins
-              from the body's tissues.
+              Cupping sessions can be booked as stand-alone or cupping may be included within an
+              acupuncture session.
             </p>
             <p>
-              This treatment is particularly effective for chronic pain, muscle tightness,
-              respiratory conditions, and promoting relaxation. It can be used alone or
-              combined with acupuncture for enhanced results.
+              Cupping involves the use of glass cups which suction the skin and muscle inwards to
+              move stagnant blood and draw toxins from the tissue and muscles. It activates the flow
+              of Qi and Blood through the sinew channels (muscles) to assist in treating pain,
+              stiffness, and many other health issues.
+            </p>
+            <p>
+              Cupping may create circular marks on the skin that range from pale pink to dark purple;
+              this provides us with an explanation of underlying pathology. Although marks can
+              sometimes look quite dark, cupping should never be painful. Your practitioner will
+              ensure you are comfortable and relaxed throughout the treatment.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-detail fade-in">
+          <div class="service-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 20c8 0 14-6 14-14C11 6 5 12 5 20z"/>
+              <path d="M5 20c3-5 7-8 12-11"/>
+            </svg>
+          </div>
+          <div class="service-detail__content">
+            <h2>Chinese Herbal Medicine</h2>
+            <p>
+              Individualised herbal formulas are prescribed to support your health goals and
+              complement acupuncture treatment.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-detail fade-in">
+          <div class="service-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 10h16c0 5-3.5 9-8 9s-8-4-8-9z"/>
+              <path d="M7 6c1.5 0 2.5 1 2.5 2.5M13 4c1.5 0 2.5 1 2.5 2.5"/>
+              <path d="M8 19v2h8v-2"/>
+            </svg>
+          </div>
+          <div class="service-detail__content">
+            <h2>Chinese Dietetics</h2>
+            <p>
+              Personalised food guidance grounded in Chinese medicine helps you nourish your body
+              according to your constitution and needs.
             </p>
           </div>
         </div>
@@ -134,13 +177,13 @@
           <div class="service-detail__content">
             <h2>Cosmetic Acupuncture</h2>
             <p>
-              Cosmetic acupuncture is a natural approach to facial rejuvenation. Using very
-              fine needles, this treatment stimulates collagen production, improves circulation,
-              and helps reduce fine lines and wrinkles.
-            </p>
-            <p>
-              Unlike invasive procedures, cosmetic acupuncture works with your body's natural
-              healing processes to create a refreshed, healthy appearance from the inside out.
+              In a cosmetic acupuncture session, fine needles are placed along the face and into
+              facial muscles to improve the appearance of fine lines, wrinkles, sagging skin and
+              bags under the eyes. The insertion of the needles stimulates the release of collagen
+              and encourages circulation of blood and Qi to the area, which may create a more plump,
+              bright and fresh appearance to the skin. Body support points may also be incorporated
+              to treat skin concerns as well as facial Gua Sha, Tui Na (Massage), and other techniques
+              tailored individually and discussed prior to treatment.
             </p>
           </div>
         </div>
@@ -148,20 +191,69 @@
         <div class="service-detail fade-in">
           <div class="service-detail__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 8v4l3 3"/>
+              <circle cx="12" cy="7" r="3"/>
+              <path d="M7 21v-4a5 5 0 0 1 10 0v4"/>
+              <path d="M9 12l-3 3M15 12l3 3"/>
             </svg>
           </div>
           <div class="service-detail__content">
-            <h2>Reiki / Universal Healing</h2>
+            <h2>Pediatric Acupuncture</h2>
             <p>
-              Reiki is a gentle, hands-on healing practice that channels universal life energy
-              to support physical, emotional, and spiritual wellbeing. It promotes deep relaxation
-              and helps release energetic blockages.
+              Paediatric sessions involve a combination of Acupuncture (tiny needles for children),
+              Acupressure, Moxibustion, Tui Na (Chinese massage) and Reiki (if both you and your child
+              consent) to assist in bringing the body back into balance.
             </p>
             <p>
-              This treatment can be offered as a standalone session or integrated with other
-              therapies to enhance your overall healing experience.
+              If a child is afraid of needles—no worries, specific acupressure tools can work with
+              equal effect to needles.
+            </p>
+            <p>Paediatric acupuncture may assist with issues such as:</p>
+            <ul class="service-detail__list">
+              <li>Digestive issues</li>
+              <li>Sleep disturbances</li>
+              <li>Hyperactivity / ADHD</li>
+              <li>Bed-wetting</li>
+              <li>Growth delays</li>
+              <li>Physical pain / ailments</li>
+              <li>Asthma</li>
+              <li>Skin issues</li>
+              <li>Recurrent colds / viruses</li>
+              <li>And more</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-detail fade-in">
+          <div class="service-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"/>
+              <circle cx="12" cy="12" r="7"/>
+              <path d="M12 1v3M12 20v3M1 12h3M20 12h3"/>
+            </svg>
+          </div>
+          <div class="service-detail__content">
+            <h2>Reiki/Universal Healing</h2>
+            <p>
+              Reiki is a form of energetic healing that works with the body's main energy centres
+              (chakras) and the aura.
+            </p>
+            <p>
+              The body's chakras process energetic vibrations between the outer world and the physical
+              body and soul. When balanced, energy can flow freely through the chakras, harmonising the
+              mind, body and spirit. When chakras are blocked, imbalances can cause mental, physical,
+              emotional and spiritual ailments.
+            </p>
+            <p>
+              During a Reiki session, universal source Qi/energy is channelled via the practitioner to
+              the receiver using both hands-on and hands-off techniques. The energy is specific to the
+              receiver and always works to bring the body back into balance by resolving blockages,
+              clearing away negativity and establishing free flow of energy throughout the chakra and
+              subtle energy bodies. Reiki is an extremely relaxing therapy and may provide the receiver
+              with a sense of clarity, calm and an overall 'light' feeling.
+            </p>
+            <p>
+              Intuitive guidance or information may be offered to the receiver throughout these sessions
+              if the receiver is open.
             </p>
           </div>
         </div>
@@ -205,7 +297,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 The Qi Collective. All rights reserved.</p>
+        <p>&copy; 2026 The Qi Collective. All rights reserved.</p>
       </div>
     </div>
   </footer>
