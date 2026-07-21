@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const serviceRadios = document.querySelectorAll('input[name="service"]');
   const toStep2Btn = document.getElementById('to-step-2');
   const toStep3Btn = document.getElementById('to-step-3');
-  const toStep4Btn = document.getElementById('to-step-4');
   const backToStep1Btn = document.getElementById('back-to-step-1');
   const backToStep2Btn = document.getElementById('back-to-step-2');
   const backToStep3Btn = document.getElementById('back-to-step-3');
@@ -293,8 +292,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  if (toStep4Btn) {
-    toStep4Btn.addEventListener('click', () => {
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
       if (validateForm()) {
         updateSummary();
         showStep(4);

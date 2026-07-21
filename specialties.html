@@ -29,7 +29,7 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -37,7 +37,17 @@
         <ul class="nav__list">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link">Practitioners</a></li>
-          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li class="nav__item--dropdown">
+            <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+              Services <span class="nav__dropdown-icon" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="services-menu">
+              <li><a href="services.html" class="nav__dropdown-link">Services</a></li>
+              <li><a href="booking.html" class="nav__dropdown-link">Appointments</a></li>
+              <li><a href="contact.html?subject=movement" class="nav__dropdown-link">Movement</a></li>
+              <li><a href="contact.html?subject=workshops" class="nav__dropdown-link">Education/Workshops</a></li>
+            </ul>
+          </li>
           <li><a href="specialties.html" class="nav__link nav__link--active">Specialties</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
           <li class="nav__item--mobile"><a href="booking.html" class="btn btn--primary btn--small">Book Appointment</a></li>
@@ -75,7 +85,7 @@
         </div>
 
         <div class="specialty-detail fade-in-scale stagger-2">
-          <h2>Mental & Emotional Health</h2>
+          <h2>Mental &amp; Emotional Health</h2>
           <p>
             The mind-body connection is central to Chinese Medicine. We provide gentle,
             supportive care for:
@@ -165,7 +175,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 The Qi Collective. All rights reserved.</p>
+        <p>&copy; 2026 The Qi Collective. All rights reserved.</p>
       </div>
     </div>
   </footer>

@@ -1,10 +1,10 @@
-# Charlotte Clinic - Acupuncture & Chinese Medicine
+# The Qi Collective - Acupuncture & Chinese Medicine
 
-A website for Charlotte Powell's acupuncture clinic and Chinese medicine healing practice based in Brisbane, Australia.
+A website for The Qi Collective, a multidisciplinary acupuncture, Chinese medicine, and holistic wellbeing clinic in Rose Park, Adelaide.
 
 ## Project Overview
 
-This website serves as the digital presence for Charlotte's clinic, providing information about services, practitioner background, and enabling potential clients to book appointments and get in contact.
+This website serves as the digital presence for The Qi Collective, providing information about its services and multidisciplinary practitioner team while enabling potential clients to book appointments and get in contact.
 
 ### Client: Charlotte Powell
 
@@ -15,9 +15,11 @@ This website serves as the digital presence for Charlotte's clinic, providing in
 ### Services Offered
 
 - Acupuncture
-- Herbal Medicine & Chinese Dietary Advice
-- Cupping Therapy
+- Cupping
+- Chinese Herbal Medicine
+- Chinese Dietetics
 - Cosmetic Acupuncture
+- Paediatric Acupuncture
 - Reiki/Universal Healing
 
 ### Special Interests
@@ -90,6 +92,13 @@ charlotteclinic/
 ```
 
 ## Changelog
+
+### Clinic Content and Navigation Refresh
+- Reframed the homepage around The Qi Collective, adding the Rose Park welcome copy and a dedicated mission statement while removing the testimonial section
+- Expanded the practitioner roster to Charlotte Powell, Annabelle Boehm, Kate O'Leary, Emily Floreani, and Samara Holliday, with supplied roles, interests, credentials, and available portraits
+- Redesigned the Services page as a responsive four-column card grid with seven treatments and expanded supplied copy for acupuncture, cupping, cosmetic acupuncture, paediatric acupuncture, and Reiki
+- Added an accessible Services dropdown across the site for Services, Appointments, Movement, and Education/Workshops, with enquiry preselection for offerings without dedicated pages
+- Updated Adelaide location references in page metadata and contact details
 
 ### Brand Logo Refresh (Gold Hover Retained)
 - Introduced the new "The Qi Collective" logo across all seven pages (header and footer)

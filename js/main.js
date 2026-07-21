@@ -28,6 +28,33 @@ document.addEventListener('DOMContentLoaded', function() {
   const navToggle = document.querySelector('.nav-toggle');
   const navList = document.querySelector('.nav__list');
   const header = document.querySelector('.header');
+  const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+
+  function closeDropdowns(exceptItem) {
+    dropdownItems.forEach(item => {
+      if (item !== exceptItem) {
+        item.classList.remove('is-open');
+        item.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  dropdownItems.forEach(item => {
+    const toggle = item.querySelector('.nav__dropdown-toggle');
+
+    toggle.addEventListener('click', function(event) {
+      event.stopPropagation();
+      const willOpen = !item.classList.contains('is-open');
+
+      closeDropdowns(item);
+      item.classList.toggle('is-open', willOpen);
+      toggle.setAttribute('aria-expanded', String(willOpen));
+    });
+  });
+
+  document.addEventListener('click', function() {
+    closeDropdowns();
+  });
 
   // Create overlay element for mobile nav
   const navOverlay = document.createElement('div');
@@ -39,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.classList.remove('active');
     navOverlay.classList.remove('active');
     document.body.style.overflow = '';
+    closeDropdowns();
   }
 
   function openNav() {
@@ -61,15 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
     navOverlay.addEventListener('click', closeNav);
 
     // Close mobile nav when clicking a link
-    const navLinks = navList.querySelectorAll('.nav__link');
+    const navLinks = navList.querySelectorAll('a.nav__link, .nav__dropdown-link');
     navLinks.forEach(link => {
       link.addEventListener('click', closeNav);
     });
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && navList.classList.contains('active')) {
-        closeNav();
+      if (e.key === 'Escape') {
+        const openDropdown = document.querySelector('.nav__item--dropdown.is-open');
+
+        if (openDropdown) {
+          const openToggle = openDropdown.querySelector('.nav__dropdown-toggle');
+          closeDropdowns();
+          openToggle.focus();
+        } else if (navList.classList.contains('active')) {
+          closeNav();
+        }
       }
     });
   }
@@ -112,6 +148,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Simple form handling (placeholder - can be connected to backend)
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
+    const requestedSubject = new URLSearchParams(window.location.search).get('subject');
+    const subjectSelect = contactForm.querySelector('#subject');
+
+    const hasRequestedSubject = Array.from(subjectSelect.options).some(option => option.value === requestedSubject);
+
+    if (requestedSubject && hasRequestedSubject) {
+      subjectSelect.value = requestedSubject;
+    }
+
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
