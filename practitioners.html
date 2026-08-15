@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Meet the practitioners at The Qi Collective - Our team of qualified acupuncturists and Chinese medicine practitioners in Rose Park, Adelaide.">
   <title>Our Practitioners | The Qi Collective</title>
+  <link rel="icon" type="image/png" href="images/qi-logo-mark-gold.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +19,33 @@
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <a href="index.html" class="logo">
-        <svg class="logo__mark" viewBox="0 0 56 60" fill="none" aria-hidden="true" focusable="false">
-          <path d="M34.2 7.8 A24 24 0 1 1 21.8 7.8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="28" cy="38.5" r="16.5" stroke-width="1.3"/>
-          <circle cx="28" cy="44" r="11" stroke-width="1.3"/>
-          <circle cx="28" cy="48" r="7" stroke-width="1.3"/>
+      <a href="index.html" class="logo" aria-label="The Qi Collective home">
+        <svg class="logo__mark" viewBox="180 90 965 900" aria-hidden="true" focusable="false">
+          <defs>
+            <filter id="remove-white-header" color-interpolation-filters="sRGB">
+              <feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                -1 -1 -1 0 3"/>
+            </filter>
+          </defs>
+          <image href="images/qi-logo-mark-gold.png" width="1325" height="1080" filter="url(#remove-white-header)"/>
         </svg>
-        <span class="logo__text">The <span class="logo__accent">Qi</span> Collective</span>
+        <span class="logo__lockup" aria-hidden="true">
+          <span class="logo__eyebrow">The</span>
+          <span class="logo__name">Qi Collective</span>
+          <span class="logo__tagline">Balanced + Integrated Healing</span>
+        </span>
       </a>
 
-      <nav class="nav">
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="nav__list">
+        <ul class="nav__list" id="primary-navigation">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link nav__link--active">Practitioners</a></li>
           <li class="nav__item--dropdown">
@@ -80,29 +91,61 @@
         <!-- Practitioner 1: Charlotte -->
         <div class="practitioner-card fade-in">
           <div class="practitioner-card__image">
-            <img src="images/charlotte.webp" alt="Charlotte Powell - Principal Practitioner">
+            <img src="images/charlotte.webp" alt="Charlotte Powell, Doctor of Chinese Medicine and Reiki practitioner">
           </div>
           <div class="practitioner-card__content">
             <h2>Charlotte Powell</h2>
-            <p class="practitioner-card__title">Acupuncturist / Chinese Herbal Medicine / Universal Healing Practitioner (Reiki)</p>
-            <p class="practitioner-card__specialties">
-              <strong>Specialties:</strong> Women's Health, Mental/Emotional Health, Peri-Natal Care
+            <p class="practitioner-card__title">Doctor of Chinese Medicine / Universal Healing (Reiki) Practitioner</p>
+            <p class="practitioner-card__bio">
+              Charlotte is a degree-qualified and AHPRA registered Doctor of Chinese Medicine and
+              Universal Healing (Reiki) Practitioner.
             </p>
             <p class="practitioner-card__bio">
-              Charlotte is an AHPRA registered Acupuncturist and Doctor of Traditional Chinese
-              Medicine (TCM) who believes that the ancient art of acupuncture found her at the
-              perfect point of her journey. Her approach to practice is centred in the connection
-              between the physical, psychological/emotional and spiritual bodies.
+              Charlotte follows a holistic and open-minded approach to health and wellness,
+              bringing awareness and focus to all aspects of the human being (physical,
+              mental/emotional and spiritual). She acknowledges and understands the connection
+              between these elements and ensures treatments work through the different layers to
+              bring harmony back to the system.
             </p>
             <p class="practitioner-card__bio">
-              She endeavours to hold an open, empathetic, non-judgemental and compassionate
-              space for her patients to share, heal, learn and grow.
+              Charlotte has developed a deep love and passion for holistic health and wellbeing
+              throughout her life, recognising throughout her own health journey how the integration
+              of different holistic therapies can assist in creating an optimally healthy and balanced
+              state of being.
+            </p>
+            <p class="practitioner-card__bio">
+              Charlotte thrives in helping others &lsquo;connect the dots&rsquo; and find a deeper
+              understanding of themselves and the world around them. She is deeply committed to
+              assisting others on their health and wellbeing journey and helping to inspire them to
+              commit to themselves and prioritise their own healing.
+            </p>
+            <p class="practitioner-card__bio">
+              Throughout her study and her work, Charlotte has developed a special interest in
+              treating Women&rsquo;s Health conditions, Mental/Emotional wellbeing, Paediatrics and
+              has developed her skills further in the Peri-Natal field caring for women from
+              pre-conception through to postpartum and beyond.
+            </p>
+            <p class="practitioner-card__bio">
+              Charlotte draws on all aspects of Chinese Medicine and Reiki (where requested) to
+              assist her patients in removing blocks, establishing balance and free-flow and
+              improving overall health and wellbeing.
+            </p>
+            <p class="practitioner-card__bio">
+              Charlotte is registered with AHPRA (Australian Health Practitioners Regulation
+              Agency), is a fully accredited member of the Australian Acupuncture and Chinese
+              Medicine Association (AACMA) and is a registered practitioner with the Chinese
+              Medicine Board of Australia (CMBA).
             </p>
             <div class="practitioner-card__credentials">
               <span class="credential-badge">AHPRA Registered</span>
               <span class="credential-badge">AACMA Member</span>
               <span class="credential-badge">CMBA Registered</span>
             </div>
+            <p class="practitioner-card__rebate">Private health rebates may be available; please check with your health fund.</p>
+            <nav class="practitioner-card__links" aria-label="Connect with Charlotte Powell">
+              <a href="mailto:charlotte@theqicollective.com.au">charlotte@theqicollective.com.au</a>
+              <a href="https://www.instagram.com/charlottepowell_acupuncture/" target="_blank" rel="noopener noreferrer">@charlottepowell_acupuncture <span aria-hidden="true">↗</span></a>
+            </nav>
           </div>
         </div>
 
@@ -113,16 +156,52 @@
           </div>
           <div class="practitioner-card__content">
             <h2>Annabelle Boehm</h2>
-            <p class="practitioner-card__title">Acupuncturist / Universal Healing Practitioner (Reiki)</p>
-            <p class="practitioner-card__specialties">
-              <strong>Specialties:</strong> Women's health, Hormonal Balance, Fertility, Pregnancy,
-              Skin concerns, Digestive issues, Pain management, and Overall well-being.
+            <p class="practitioner-card__title">Classical Chinese Medicine Practitioner / Acupuncturist / Reiki Practitioner</p>
+            <p class="practitioner-card__bio">
+              Annabelle is a Classical Chinese Medicine Practitioner, Acupuncturist, and Reiki
+              Practitioner who supports people in reconnecting with their bodies and returning to a
+              greater sense of balance.
+            </p>
+            <p class="practitioner-card__bio">
+              She works with a wide range of health concerns and has a particular interest in helping
+              people navigate the emotional and mental barriers that can impact wellbeing. She
+              understands that stress, overwhelm, anxiety, fear, burnout and unresolved life
+              experiences can affect not only our emotional health but also our physical being and
+              our ability to thrive. Her approach combines hands-on techniques, acupuncture, and
+              energy work, tailored to each person.
+            </p>
+            <p class="practitioner-card__bio">
+              Annabelle has completed advanced training with Ann Cecil-Sterman and has studied the
+              full 68-channel system of Classical Acupuncture, allowing her to work with a broad
+              range of complex and chronic conditions.
+            </p>
+            <p class="practitioner-card__support-heading">Annabelle supports people with:</p>
+            <ul class="practitioner-card__support-list">
+              <li>Hormonal and reproductive health, including fertility, pregnancy, menopause, and menstrual concerns</li>
+              <li>Digestive issues and systemic inflammation</li>
+              <li>Pain and musculoskeletal conditions</li>
+              <li>Stress, burnout, anxiety, and nervous system dysregulation</li>
+              <li>Autoimmune, complex and chronic health conditions</li>
+              <li>Those who feel &ldquo;off&rdquo; despite normal test results</li>
+            </ul>
+            <p class="practitioner-card__bio">
+              At the heart of her practice is the intention to create a warm, safe, and supportive
+              environment, where people feel heard, understood and empowered. Annabelle provides
+              gentle, compassionate care as she guides her patients towards a greater sense of
+              clarity, resilience, balance and wellbeing.
             </p>
             <div class="practitioner-card__credentials">
               <span class="credential-badge">AHPRA Registered</span>
               <span class="credential-badge">AACMA Member</span>
               <span class="credential-badge">CMBA Registered</span>
             </div>
+            <p class="practitioner-card__rebate">Private health rebates may be available; please check with your health fund.</p>
+            <nav class="practitioner-card__links" aria-label="Connect with Annabelle Boehm">
+              <a href="mailto:annabelle.acupuncture@gmail.com">annabelle.acupuncture@gmail.com</a>
+              <a href="https://annabelleboehm.com" target="_blank" rel="noopener noreferrer">annabelleboehm.com <span aria-hidden="true">↗</span></a>
+              <a href="https://annabelle-boehm.au4.cliniko.com/bookings?business_id=1998430348085568745&amp;practitioner_id=1598992481846830972" target="_blank" rel="noopener noreferrer">Book with Annabelle <span aria-hidden="true">↗</span></a>
+              <a href="https://www.instagram.com/annabelleboehm.acupuncture/" target="_blank" rel="noopener noreferrer">@annabelleboehm.acupuncture <span aria-hidden="true">↗</span></a>
+            </nav>
           </div>
         </div>
 
@@ -133,39 +212,90 @@
           </div>
           <div class="practitioner-card__content">
             <h2>Kate O'Leary</h2>
-            <p class="practitioner-card__title">Acupuncturist / Universal Healing Practitioner (Reiki), and Yoga Facilitator</p>
-            <p class="practitioner-card__specialties">
-              <strong>Special interests:</strong> Women's Health, Perinatal, Autoimmune,
-              Gastrointestinal, and Chronic Conditions.
+            <p class="practitioner-card__title">Chinese Medicine Practitioner / Acupuncturist / Reiki Practitioner / Yoga Facilitator</p>
+            <p class="practitioner-card__bio">
+              Kate is a degree-qualified Chinese Medicine Practitioner and Acupuncturist with a
+              clinical approach strongly influenced by the principles of Classical Acupuncture. Her
+              treatment philosophy is informed by an appreciation of the traditional foundations of
+              Chinese Medicine, combined with an evidence-informed, patient-centred approach to
+              care. Kate is Reiki attuned and offers energy work in addition to her acupuncture
+              treatments.
+            </p>
+            <p class="practitioner-card__bio">
+              Before entering healthcare, Kate worked professionally in the arts, an experience that
+              fostered creativity, observation and a deep understanding of the human experience. She
+              has also maintained a dedicated yoga practice for more than 20 years and is a Yoga
+              Facilitator with over 500 hours of registered teacher training, as well as an Ayurvedic
+              Lifestyle Consultant. These complementary disciplines enhance her holistic approach to
+              supporting health and wellbeing. Kate believes food is a central pillar of wellness and
+              offers stand-alone Oriental Medicine Nutrition consultations.
+            </p>
+            <p class="practitioner-card__bio">
+              Kate has a particular interest in women&rsquo;s health, with a focus on menopause,
+              fertility, pregnancy and postpartum care. Her passion for supporting women during the
+              perinatal period was inspired by her own experiences through pregnancy and birth with
+              her two daughters. She teaches regular Pregnancy Yoga classes and birth preparation
+              workshops. In addition, Kate offers postnatal home visits to assist in nourishing and
+              supporting new mothers.
+            </p>
+            <p class="practitioner-card__bio">
+              She also enjoys working with patients experiencing autoimmune conditions, digestive
+              disorders and chronic health concerns. Recognising the close relationship between
+              physical and mental health, Kate places emotional wellbeing at the centre of her
+              treatment approach. She is committed to providing personalised, comprehensive care
+              that addresses the underlying patterns contributing to illness, rather than simply
+              managing symptoms, helping patients achieve sustainable improvements in their health
+              and quality of life.
             </p>
             <div class="practitioner-card__credentials">
               <span class="credential-badge">AHPRA Registered</span>
               <span class="credential-badge">AACMA Member</span>
               <span class="credential-badge">CMBA Registered</span>
             </div>
+            <p class="practitioner-card__rebate">Private health rebates may be available; please check with your health fund.</p>
+            <nav class="practitioner-card__links" aria-label="Connect with Kate O'Leary">
+              <a href="mailto:lotushealth@me.com">lotushealth@me.com</a>
+              <a href="https://www.instagram.com/kate_oleary_acupuncture/" target="_blank" rel="noopener noreferrer">@kate_oleary_acupuncture <span aria-hidden="true">↗</span></a>
+            </nav>
           </div>
         </div>
 
         <!-- Practitioner 4: Emily -->
         <div class="practitioner-card fade-in">
           <div class="practitioner-card__image">
-            <div class="practitioner-card__image-placeholder" role="img" aria-label="Portrait of Emily Floreani coming soon">
-              Photo coming soon
-            </div>
+            <img src="images/emily-floreani.png" alt="Emily Floreani seated in The Qi Collective treatment space">
           </div>
           <div class="practitioner-card__content">
             <h2>Emily Floreani</h2>
-            <p class="practitioner-card__title">Acupuncturist / Chinese Herbal Medicine / Universal Healing Practitioner (Reiki) / Yoga Facilitator</p>
-            <p class="practitioner-card__specialties">
-              <strong>Special interests:</strong> Women's Health, Hormonal and emotional wellbeing,
-              Digestive health, Nervous system regulation, Stress management, and supporting people
-              to optimise their health naturally.
+            <p class="practitioner-card__title">Chinese Medicine Practitioner / Acupuncturist / Yoga Teacher</p>
+            <p class="practitioner-card__bio">
+              Emily grew up in a family of chiropractors, immersed in natural health from an early
+              age.
+            </p>
+            <p class="practitioner-card__bio">
+              She began her studies at RMIT in Melbourne before relocating to Adelaide, where she
+              completed her Bachelor degree at Endeavour College of Natural Health.
+            </p>
+            <p class="practitioner-card__bio">
+              Emily is deeply passionate about holistic healthcare and supporting others on their
+              healing journey. Her own positive experiences with acupuncture inspired her to pursue
+              this path, and she now finds great fulfilment in helping clients feel more balanced,
+              empowered, and well.
+            </p>
+            <p class="practitioner-card__bio">
+              Outside of the clinic, Emily is also a yoga teacher who enjoys staying active,
+              spending time by the beach, and unwinding with a good book!
             </p>
             <div class="practitioner-card__credentials">
               <span class="credential-badge">AHPRA Registered</span>
               <span class="credential-badge">AACMA Member</span>
               <span class="credential-badge">CMBA Registered</span>
             </div>
+            <p class="practitioner-card__rebate">Private health rebates may be available; please check with your health fund.</p>
+            <nav class="practitioner-card__links" aria-label="Connect with Emily Floreani">
+              <a href="mailto:flo.with.emily@gmail.com">flo.with.emily@gmail.com</a>
+              <a href="https://www.instagram.com/flo.with.emily/" target="_blank" rel="noopener noreferrer">@flo.with.emily <span aria-hidden="true">↗</span></a>
+            </nav>
           </div>
         </div>
 
@@ -201,13 +331,7 @@
     <div class="container">
       <div class="footer__inner">
         <a href="index.html" class="footer__logo">
-          <svg class="logo__mark" viewBox="0 0 56 60" fill="none" aria-hidden="true" focusable="false">
-            <path d="M34.2 7.8 A24 24 0 1 1 21.8 7.8" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="28" cy="38.5" r="16.5" stroke-width="1.3"/>
-            <circle cx="28" cy="44" r="11" stroke-width="1.3"/>
-            <circle cx="28" cy="48" r="7" stroke-width="1.3"/>
-          </svg>
-          <span class="logo__text">The <span class="logo__accent">Qi</span> Collective</span>
+          <img src="images/qi-logo-lockup.png" alt="The Qi Collective — Balanced + Integrated Healing">
         </a>
         <ul class="footer__links">
           <li><a href="about.html">About</a></li>
