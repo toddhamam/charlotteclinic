@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const navList = document.querySelector('.nav__list');
   const header = document.querySelector('.header');
   const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+  const mobileNavMedia = window.matchMedia('(max-width: 900px)');
 
   function closeDropdowns(exceptItem) {
     dropdownItems.forEach(item => {
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navList.classList.remove('active');
     navToggle.classList.remove('active');
     navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation');
     navOverlay.classList.remove('active');
     document.body.style.overflow = '';
     closeDropdowns();
@@ -84,11 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
     navList.classList.add('active');
     navToggle.classList.add('active');
     navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Close navigation');
     navOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   if (navToggle && navList) {
+    navToggle.setAttribute('aria-label', 'Open navigation');
+
     navToggle.addEventListener('click', function() {
       if (navList.classList.contains('active')) {
         closeNav();
@@ -98,7 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close mobile nav when clicking overlay
-    navOverlay.addEventListener('click', closeNav);
+    navOverlay.addEventListener('click', function() {
+      closeNav();
+      navToggle.focus();
+    });
 
     // Close mobile nav when clicking a link
     const navLinks = navList.querySelectorAll('a.nav__link, .nav__dropdown-link');
@@ -117,7 +125,15 @@ document.addEventListener('DOMContentLoaded', function() {
           openToggle.focus();
         } else if (navList.classList.contains('active')) {
           closeNav();
+          navToggle.focus();
         }
+      }
+    });
+
+    // Reset the drawer if the device rotates or expands to desktop width.
+    mobileNavMedia.addEventListener('change', function(event) {
+      if (!event.matches) {
+        closeNav();
       }
     });
   }
