@@ -93,6 +93,14 @@ charlotteclinic/
 
 ## Changelog
 
+### Studio Content and Brand Lockup Port
+- Replaced the scenic homepage overlay with Charlotte's supplied Qi passage and refreshed the welcome image and mission statement
+- Rebuilt the About page around the supplied founding story, Qi definition, mission, vision, nurturing-space language, and practitioner CTA
+- Added the complete supplied biographies and public links for Charlotte, Annabelle, Kate, and Emily, including Emily's supplied web-ready portrait
+- Removed the homepage FAQ section and its unused accordion code
+- Adopted the supplied deep-teal, textured gold wordmark direction and “Balanced + Integrated Healing” lockup across every page
+- Added only the four selected public-facing assets to `images/`; ingestion provenance remains private under gitignored `.context/`
+
 ### Clinic Content and Navigation Refresh
 - Reframed the homepage around The Qi Collective, adding the Rose Park welcome copy and a dedicated mission statement while removing the testimonial section
 - Expanded the practitioner roster to Charlotte Powell, Annabelle Boehm, Kate O'Leary, Emily Floreani, and Samara Holliday, with supplied roles, interests, credentials, and available portraits
@@ -100,13 +108,11 @@ charlotteclinic/
 - Added an accessible Services dropdown across the site for Services, Appointments, Movement, and Education/Workshops, with enquiry preselection for offerings without dedicated pages
 - Updated Adelaide location references in page metadata and contact details
 
-### Brand Logo Refresh (Gold Hover Retained)
-- Introduced the new "The Qi Collective" logo across all seven pages (header and footer)
-- Added an inline SVG "ripple" mark — nested concentric circles inside an open enso — rendered in brand teal, so it scales crisply at any size and keeps a transparent background
-- Rebuilt the wordmark as live text so "Qi" reads in teal while "The" and "Collective" stay charcoal, matching the supplied artwork
-- Retained the signature interaction: the charcoal wordmark transitions to gold on hover, while the teal "Qi" and the ripple mark stay teal
-- Added a reusable `--color-gold` (#C9A24B) design token for the hover state
-- Footer logo mirrors the header treatment, recoloured for the dark background (light-teal mark and "Qi", cream wordmark)
+### Brand Logo Refresh
+- Uses the supplied clean gold ripple mark as the source artwork for the header treatment
+- Recreates the gold wordmark and “Balanced + Integrated Healing” tagline as a compact, accessible header lockup
+- Uses the exact supplied textured teal-and-gold lockup in every footer
+- Defines deep-teal and gold design tokens centrally in the site stylesheet
 
 ### Ocean Video Hero Background
 - Added a subtle looping ocean video background to the homepage hero section

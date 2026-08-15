@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Qi Collective - Acupuncture and Chinese Medicine in Rose Park, Adelaide. A multidisciplinary team offering acupuncture, herbal medicine, cupping, and holistic care.">
   <title>The Qi Collective | Acupuncture &amp; Chinese Medicine Adelaide</title>
+  <link rel="icon" type="image/png" href="images/qi-logo-mark-gold.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +19,33 @@
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <a href="index.html" class="logo">
-        <svg class="logo__mark" viewBox="0 0 56 60" fill="none" aria-hidden="true" focusable="false">
-          <path d="M34.2 7.8 A24 24 0 1 1 21.8 7.8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="28" cy="38.5" r="16.5" stroke-width="1.3"/>
-          <circle cx="28" cy="44" r="11" stroke-width="1.3"/>
-          <circle cx="28" cy="48" r="7" stroke-width="1.3"/>
+      <a href="index.html" class="logo" aria-label="The Qi Collective home">
+        <svg class="logo__mark" viewBox="180 90 965 900" aria-hidden="true" focusable="false">
+          <defs>
+            <filter id="remove-white-header" color-interpolation-filters="sRGB">
+              <feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                -1 -1 -1 0 3"/>
+            </filter>
+          </defs>
+          <image href="images/qi-logo-mark-gold.png" width="1325" height="1080" filter="url(#remove-white-header)"/>
         </svg>
-        <span class="logo__text">The <span class="logo__accent">Qi</span> Collective</span>
+        <span class="logo__lockup" aria-hidden="true">
+          <span class="logo__eyebrow">The</span>
+          <span class="logo__name">Qi Collective</span>
+          <span class="logo__tagline">Balanced + Integrated Healing</span>
+        </span>
       </a>
 
-      <nav class="nav">
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="nav__list">
+        <ul class="nav__list" id="primary-navigation">
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="practitioners.html" class="nav__link">Practitioners</a></li>
           <li class="nav__item--dropdown">
@@ -59,18 +70,21 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <video class="hero__video" autoplay muted loop playsinline>
+    <video class="hero__video" muted loop playsinline aria-hidden="true">
       <source src="images/ocean-bg.mp4" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__subtitle">Acupuncture &amp; Chinese Medicine</p>
-      <h1 class="hero__title">Where Energy Flows,<br>Healing Follows.</h1>
+      <h1 class="hero__title">Qi is the vital energy that flows through all living things</h1>
       <p class="hero__description">
-        Release what blocks you. Restore what sustains you. In this compassionate space,
-        we work together to reconnect you with your body's natural wisdom and vitality.
+        — the quiet current that connects body, mind and spirit. In Chinese medicine, Qi is the
+        force that moves, nourishes and sustains us, creating harmony when it flows freely.
       </p>
-      <a href="contact.html" class="btn btn--primary">Begin Your Journey</a>
+      <p class="hero__mantra">It is breath. It is movement. It is life.</p>
+      <p class="hero__description">
+        At its heart, Qi is the art of returning to balance — allowing the body to soften,
+        restore and reconnect with its innate capacity to heal.
+      </p>
     </div>
   </section>
 
@@ -79,7 +93,7 @@
     <div class="container">
       <div class="about__grid">
         <div class="about__image fade-in-left">
-          <img src="images/charlotte.webp" alt="Charlotte Powell - Acupuncturist and Traditional Chinese Medicine practitioner">
+          <img src="images/qi-collective-welcome.jpg" alt="Green crystal and leafy plant in The Qi Collective treatment space">
         </div>
         <div class="about__content fade-in-right">
           <h2>WELCOME TO THE QI COLLECTIVE</h2>
@@ -105,13 +119,16 @@
     <div class="container">
       <div class="mission__inner fade-in">
         <h2>OUR MISSION</h2>
-        <p>
-          To provide Adelaide with a holistic, high vibrational wellness space with exceptional
-          practitioners committed to the holistic health and wellbeing of their patients. We strive
-          to create the opportunity for more clients to receive care from experienced, intuitive,
-          knowledgeable and deeply empathetic practitioners and to create a space where people feel
-          safe, held and understood.
-        </p>
+        <div class="mission__content">
+          <p>
+            At the Qi Collective, our mission is to provide a clear, calm and high-vibrational
+            wellness space, with exceptional practitioners who are deeply passionate about holistic
+            wellbeing and guiding their clients on their healing journey.
+          </p>
+          <div class="mission__mark">
+            <img src="images/qi-logo-mark-gold.png" alt="The Qi Collective gold ripple mark">
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -218,114 +235,13 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="faq section-padding">
-    <div class="container">
-      <div class="faq__header fade-in">
-        <h2>Frequently Asked Questions</h2>
-        <p>Common questions about acupuncture and our practice</p>
-      </div>
-      <div class="faq__list">
-        <div class="faq-item fade-in">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            <span>What conditions do you treat?</span>
-            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="faq-item__answer">
-            <p>I welcome any and all ailments into the treatment room, however I have a particular interest in:</p>
-            <ul>
-              <li>Women's health</li>
-              <li>Pregnancy + pre &amp; post-natal care</li>
-              <li>Fertility</li>
-              <li>Mental health — anxiety, depression, stress, insomnia</li>
-              <li>Digestive disorders</li>
-              <li>Paediatrics</li>
-              <li>Emotional well-being</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            <span>Does acupuncture hurt?</span>
-            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="faq-item__answer">
-            <p>It is not uncommon for patients to be nervous about possible sensations during acupuncture sessions. Acupuncture should not be painful. We use very fine needles and seek to obtain a sensation called "de-qi" — which may be felt as a buzz, a dull sensation, or a slight ache that will generally dissipate quickly.</p>
-            <p>Acupuncture is very different to 'dry needling' performed by massage therapists and has very different purposes and effects. Qualified Acupuncturists undergo 4+ years of rigorous study to ensure the treatment is comfortable and relaxing.</p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            <span>Do I have to have needles?</span>
-            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="faq-item__answer">
-            <p>No, you do not. If you are afraid of needles, there are other techniques that can be used to generate the same response in the body. Acupressure tools and Tui Na (Chinese massage techniques) can be used to activate channels and points to assist in establishing balance within the body.</p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            <span>Do you accept Private Health Insurance?</span>
-            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="faq-item__answer">
-            <p>Yes! If your Private Health provider covers Acupuncture, you will be provided with a receipt once you have paid for your appointment with all the details necessary to lodge a claim. This is usually a simple process that can be done online or via your health fund's app.</p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            <span>Should I book a 60min or 45min follow-up?</span>
-            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="faq-item__answer">
-            <p>I recommend booking a 60 minute follow-up for your first few sessions after your initial treatment. 60 minute sessions are more beneficial if you require a longer consult time, or you enjoy having longer to relax on the table.</p>
-            <p>45 minute sessions are available for people who have had a few treatments already and have a comprehensive treatment plan. I will generally advise you when you are applicable for this shorter appointment time.</p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            <span>Do you treat newborns and can I bring my child?</span>
-            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="faq-item__answer">
-            <p>Yes, I treat newborns and babies from 0 months through to 10 years under a paediatric appointment. Children 10 years and above need to be booked as a general initial or follow-up appointment.</p>
-            <p>You are always welcome to bring your babies and toddlers to your own appointments as well.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <span class="footer__logo">
-          <svg class="logo__mark" viewBox="0 0 56 60" fill="none" aria-hidden="true" focusable="false">
-            <path d="M34.2 7.8 A24 24 0 1 1 21.8 7.8" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="28" cy="38.5" r="16.5" stroke-width="1.3"/>
-            <circle cx="28" cy="44" r="11" stroke-width="1.3"/>
-            <circle cx="28" cy="48" r="7" stroke-width="1.3"/>
-          </svg>
-          <span class="logo__text">The <span class="logo__accent">Qi</span> Collective</span>
-        </span>
+        <a href="index.html" class="footer__logo">
+          <img src="images/qi-logo-lockup.png" alt="The Qi Collective — Balanced + Integrated Healing">
+        </a>
         <ul class="footer__links">
           <li><a href="about.html">About</a></li>
           <li><a href="practitioners.html">Practitioners</a></li>

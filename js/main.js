@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }, observerOptions);
 
   animatedElements.forEach(el => observer.observe(el));
+
+  const heroVideo = document.querySelector('.hero__video');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (heroVideo && !prefersReducedMotion.matches) {
+    heroVideo.play().catch(() => {
+      // The static teal fallback remains visible if the browser blocks playback.
+    });
+  }
+
   // Mobile Navigation Toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navList = document.querySelector('.nav__list');
@@ -64,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeNav() {
     navList.classList.remove('active');
     navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
     navOverlay.classList.remove('active');
     document.body.style.overflow = '';
     closeDropdowns();
@@ -72,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function openNav() {
     navList.classList.add('active');
     navToggle.classList.add('active');
+    navToggle.setAttribute('aria-expanded', 'true');
     navOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -116,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
-        const headerOffset = 80;
+        const headerOffset = header ? header.offsetHeight : 88;
         const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -173,28 +185,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ============================================
-  // FAQ Accordion
-  // ============================================
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-item__question');
-
-    question.addEventListener('click', function() {
-      const isActive = item.classList.contains('active');
-
-      // Close all other items (optional - for single open behavior)
-      faqItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.classList.remove('active');
-          otherItem.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // Toggle current item
-      item.classList.toggle('active');
-      this.setAttribute('aria-expanded', !isActive);
-    });
-  });
 });

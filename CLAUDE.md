@@ -12,7 +12,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 ## Project Structure
 
 ```
-├── index.html          # Homepage with hero, welcome, mission, services, and FAQ
+├── index.html          # Homepage with Qi hero, welcome, mission, services, and specialties
 ├── about.html          # About page
 ├── services.html       # Services offered
 ├── specialties.html    # Treatment specialties
@@ -22,7 +22,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 ├── css/
 │   └── styles.css      # Main stylesheet (organized by section)
 ├── js/
-│   ├── main.js         # Navigation, animations, FAQ accordion
+│   ├── main.js         # Navigation, animations, and contact form behaviour
 │   └── booking.js      # Booking system logic
 └── images/             # Site images
 ```
@@ -30,7 +30,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 ## Design System
 
 **Color Palette:**
-- Teal (`--color-sage`), cream, charcoal, terracotta accents
+- Deep teal (`--color-teal-deep`), teal, cream, charcoal, and gold accents
 - Defined as CSS custom properties in `:root` - color changes are centralized here
 
 **Typography:**
@@ -47,7 +47,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 - `IntersectionObserver` for scroll-triggered animations
 - `DOMContentLoaded` wrapper for all JS
 - Mobile-first responsive design with grid stacking
-- Accessible desktop/mobile Services dropdown and FAQ accordion
+- Accessible desktop/mobile Services dropdown
 - SVG icons for scalability
 
 ## User Preferences
