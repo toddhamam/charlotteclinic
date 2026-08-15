@@ -93,6 +93,11 @@ charlotteclinic/
 
 ## Changelog
 
+### Shared Agent Handoff Workflow
+- Added the repository-scoped `$shit-it-out-hard` Codex skill for reviewing, documenting, verifying, committing, pushing, and opening a pull request for all current changes
+- Added the matching `/shititouthard` Conductor/Claude slash command so the same autonomous handoff can be started from the chat composer
+- Included guardrails for merged branches, unrelated user work, secrets, destructive Git operations, and pull-request verification
+
 ### Studio Content and Brand Lockup Port
 - Replaced the scenic homepage overlay with Charlotte's supplied Qi passage and refreshed the welcome image and mission statement
 - Rebuilt the About page around the supplied founding story, Qi definition, mission, vision, nurturing-space language, and practitioner CTA

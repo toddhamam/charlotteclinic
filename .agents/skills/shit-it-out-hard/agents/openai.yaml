@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shit It Out Hard"
+  short_description: "Document, commit, push, and open a PR"
+  default_prompt: "Use $shit-it-out-hard to document every current change, commit all changes, push the branch, and create a pull request."
