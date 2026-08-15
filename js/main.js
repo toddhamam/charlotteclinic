@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'
         });
       }
     });

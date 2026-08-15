@@ -93,6 +93,11 @@ charlotteclinic/
 
 ## Changelog
 
+### Homepage Hero Typography and Scroll Cue
+- Rebalanced the homepage hero typography, line lengths, spacing, and responsive sizing for a clearer visual hierarchy
+- Added an accessible animated gold line that prompts visitors to continue into the welcome section, including hover and keyboard-focus treatments
+- Preserved a static cue and instant anchor navigation for visitors who prefer reduced motion
+
 ### Shared Agent Handoff Workflow
 - Added the repository-scoped `$shit-it-out-hard` Codex skill for reviewing, documenting, verifying, committing, pushing, and opening a pull request for all current changes
 - Added the matching `/shititouthard` Conductor/Claude slash command so the same autonomous handoff can be started from the chat composer
