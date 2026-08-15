@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact The Qi Collective - Book an acupuncture or Chinese medicine consultation in Rose Park, Adelaide.">
   <title>Contact | The Qi Collective</title>
-  <link rel="icon" type="image/png" href="images/qi-logo-mark-gold.png">
+  <link rel="icon" type="image/png" href="images/qi-logo-mark-gold-transparent.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +21,7 @@
     <div class="header__inner">
       <a href="index.html" class="logo" aria-label="The Qi Collective home">
         <svg class="logo__mark" viewBox="180 90 965 900" aria-hidden="true" focusable="false">
-          <defs>
-            <filter id="remove-white-header" color-interpolation-filters="sRGB">
-              <feColorMatrix type="matrix" values="
-                1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                -1 -1 -1 0 3"/>
-            </filter>
-          </defs>
-          <image href="images/qi-logo-mark-gold.png" width="1325" height="1080" filter="url(#remove-white-header)"/>
+          <image href="images/qi-logo-mark-gold-transparent.png" width="1325" height="1080"/>
         </svg>
         <span class="logo__lockup" aria-hidden="true">
           <span class="logo__eyebrow">The</span>
@@ -89,33 +80,42 @@
           <div class="contact__details">
             <div class="contact__item">
               <svg class="contact__item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              <span>[Phone Number]</span>
-            </div>
-            <div class="contact__item">
-              <svg class="contact__item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <path d="M22 6l-10 7L2 6"/>
               </svg>
-              <span>[Email Address]</span>
+              <a href="mailto:hello@thechicollective.com.au">hello@thechicollective.com.au</a>
             </div>
             <div class="contact__item">
               <svg class="contact__item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Rose Park, Adelaide</span>
+              <span>22 Kensington Road, Rose Park 5067</span>
             </div>
           </div>
 
           <div class="contact__hours">
             <h3>Clinic Hours</h3>
             <ul>
-              <li><span>Monday - Friday:</span> [Hours]</li>
-              <li><span>Saturday:</span> [Hours]</li>
+              <li><span>Monday – Friday:</span> 8am – 6pm</li>
+              <li><span>Saturday:</span> 8am – 3pm</li>
               <li><span>Sunday:</span> Closed</li>
             </ul>
+          </div>
+
+          <div class="contact__map">
+            <h3>Find Us</h3>
+            <div class="contact__map-frame">
+              <iframe
+                src="https://maps.google.com/maps?q=22+Kensington+Road,+Rose+Park+SA+5067&amp;z=16&amp;output=embed"
+                title="Google Map showing 22 Kensington Road, Rose Park"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+            <a class="contact__map-link" href="https://www.google.com/maps/search/?api=1&amp;query=22+Kensington+Road,+Rose+Park+SA+5067" target="_blank" rel="noopener noreferrer">
+              Open in Google Maps
+            </a>
           </div>
         </div>
 
@@ -129,10 +129,6 @@
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
@@ -161,8 +157,15 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <a href="index.html" class="footer__logo">
-          <img src="images/qi-logo-lockup.png" alt="The Qi Collective — Balanced + Integrated Healing">
+        <a href="index.html" class="footer__logo" aria-label="The Qi Collective home">
+          <svg class="footer__logo-mark" viewBox="180 90 965 900" aria-hidden="true" focusable="false">
+            <image href="images/qi-logo-mark-gold-transparent.png" width="1325" height="1080"/>
+          </svg>
+          <span class="footer__logo-lockup" aria-hidden="true">
+            <span class="footer__logo-eyebrow">The</span>
+            <span class="footer__logo-name">Qi Collective</span>
+            <span class="footer__logo-tagline">Balanced + Integrated Healing</span>
+          </span>
         </a>
         <ul class="footer__links">
           <li><a href="about.html">About</a></li>
