@@ -2306,9 +2306,9 @@ a:hover {
     overscroll-behavior: contain;
     transform: translate3d(104%, 0, 0);
     transition:
-      transform 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
       opacity 0.28s ease,
-      visibility 0s linear 0.58s;
+      visibility 0s linear 1.5s;
     will-change: transform;
     z-index: 99;
   }
@@ -2339,8 +2339,8 @@ a:hover {
     opacity: 0;
     transform: translateX(1.6rem);
     transition:
-      opacity 0.28s ease,
-      transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity 0.6s ease-out,
+      transform 0.81s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .nav__list.active > li {
@@ -2348,12 +2348,12 @@ a:hover {
     transform: translateX(0);
   }
 
-  .nav__list.active > li:nth-child(1) { transition-delay: 0.12s; }
-  .nav__list.active > li:nth-child(2) { transition-delay: 0.17s; }
-  .nav__list.active > li:nth-child(3) { transition-delay: 0.22s; }
-  .nav__list.active > li:nth-child(4) { transition-delay: 0.27s; }
-  .nav__list.active > li:nth-child(5) { transition-delay: 0.32s; }
-  .nav__list.active > li:nth-child(6) { transition-delay: 0.37s; }
+  .nav__list.active > li:nth-child(1) { transition-delay: 0.09s; }
+  .nav__list.active > li:nth-child(2) { transition-delay: 0.21s; }
+  .nav__list.active > li:nth-child(3) { transition-delay: 0.33s; }
+  .nav__list.active > li:nth-child(4) { transition-delay: 0.45s; }
+  .nav__list.active > li:nth-child(5) { transition-delay: 0.57s; }
+  .nav__list.active > li:nth-child(6) { transition-delay: 0.69s; }
 
   .nav__list .nav__link {
     display: flex;
