@@ -96,6 +96,7 @@ charlotteclinic/
 ### Homepage Hero Typography and Scroll Cue
 - Rebalanced the homepage hero typography, line lengths, spacing, and responsive sizing for a clearer visual hierarchy
 - Added an accessible animated gold line that prompts visitors to continue into the welcome section, including hover and keyboard-focus treatments
+- Centered the animated line within its touch target so it stays aligned at the bottom center across mobile widths and high-density displays
 - Preserved a static cue and instant anchor navigation for visitors who prefer reduced motion
 
 ### Shared Agent Handoff Workflow
