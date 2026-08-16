@@ -93,6 +93,11 @@ charlotteclinic/
 
 ## Changelog
 
+### Mobile Navigation Motion
+- Slowed the mobile drawer to a 1.5-second reveal with a synchronized closing delay for a calmer, brand-aligned transition
+- Reworked the six navigation links into an overlapping wave stagger, with each link gliding smoothly into place as the drawer settles
+- Preserved the existing instant-transition treatment for visitors who prefer reduced motion
+
 ### Homepage Hero Typography and Scroll Cue
 - Rebalanced the homepage hero typography, line lengths, spacing, and responsive sizing for a clearer visual hierarchy
 - Added an accessible animated gold line that prompts visitors to continue into the welcome section, including hover and keyboard-focus treatments
