@@ -14,6 +14,15 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Without JavaScript the gallery is skipped and every profile is shown in full -->
+  <noscript>
+    <style>
+      .practitioner-gallery { display: none; }
+      .practitioner-profile[hidden] { display: block; }
+      .practitioner-back { display: none; }
+    </style>
+  </noscript>
 </head>
 <body>
   <!-- Header -->
@@ -60,32 +69,119 @@
   </header>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <section class="page-header page-header--intro">
     <div class="container">
       <h1>Meet Our Practitioners</h1>
-      <p>A dedicated team committed to your health and wellbeing</p>
+      <p>
+        Our team of qualified practitioners brings together years of experience and a shared
+        commitment to holistic healing. Each practitioner offers their unique expertise while
+        working within our collaborative, patient-centred approach.
+      </p>
     </div>
   </section>
 
   <!-- Practitioners Content -->
   <section class="practitioners-page section-padding">
     <div class="container">
-      <div class="practitioners-intro fade-in">
-        <p>
-          Our team of qualified practitioners brings together years of experience and a shared
-          commitment to holistic healing. Each practitioner offers their unique expertise while
-          working within our collaborative, patient-centred approach.
-        </p>
+      <!-- Gallery: choose a practitioner -->
+      <div class="practitioner-gallery" data-practitioner-gallery>
+        <div class="practitioner-gallery__heading fade-in">
+          <h2 id="practitioner-gallery-title" tabindex="-1">Choose a Practitioner</h2>
+          <p>Select a practitioner to read their full profile, areas of focus and booking details.</p>
+        </div>
+
+        <div class="practitioner-gallery__grid">
+          <a class="practitioner-tile fade-in" href="practitioners.html?practitioner=charlotte#practitioner-charlotte" data-practitioner-link="charlotte">
+            <span class="practitioner-tile__portrait">
+              <img src="images/charlotte.webp" alt="Charlotte Powell">
+            </span>
+            <span class="practitioner-tile__content">
+              <span class="practitioner-tile__name">Charlotte Powell</span>
+              <span class="practitioner-tile__role">Doctor of Chinese Medicine / Universal Healing (Reiki) Practitioner</span>
+              <span class="practitioner-tile__summary">A holistic, open-minded approach that works through the physical, mental/emotional and spiritual layers.</span>
+              <span class="practitioner-tile__tags">
+                <span class="practitioner-tag">Women&rsquo;s Health</span>
+                <span class="practitioner-tag">Fertility &amp; Perinatal</span>
+                <span class="practitioner-tag">Mental &amp; Emotional Wellbeing</span>
+                <span class="practitioner-tag">Paediatrics</span>
+                <span class="practitioner-tag">Reiki</span>
+              </span>
+              <span class="practitioner-tile__action">View full profile <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+
+          <a class="practitioner-tile fade-in" href="practitioners.html?practitioner=annabelle#practitioner-annabelle" data-practitioner-link="annabelle">
+            <span class="practitioner-tile__portrait">
+              <img src="images/annabelle-boehm.jpg" alt="Annabelle Boehm">
+            </span>
+            <span class="practitioner-tile__content">
+              <span class="practitioner-tile__name">Annabelle Boehm</span>
+              <span class="practitioner-tile__role">Classical Chinese Medicine Practitioner / Acupuncturist / Reiki Practitioner</span>
+              <span class="practitioner-tile__summary">Trained in the full 68-channel Classical Acupuncture system, working with complex and chronic conditions.</span>
+              <span class="practitioner-tile__tags">
+                <span class="practitioner-tag">Hormonal &amp; Reproductive Health</span>
+                <span class="practitioner-tag">Stress &amp; Burnout</span>
+                <span class="practitioner-tag">Digestive Health</span>
+                <span class="practitioner-tag">Chronic &amp; Autoimmune</span>
+                <span class="practitioner-tag">Cosmetic Acupuncture</span>
+              </span>
+              <span class="practitioner-tile__action">View full profile <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+
+          <a class="practitioner-tile fade-in" href="practitioners.html?practitioner=kate#practitioner-kate" data-practitioner-link="kate">
+            <span class="practitioner-tile__portrait">
+              <img src="images/kate-oleary.jpg" alt="Kate O'Leary">
+            </span>
+            <span class="practitioner-tile__content">
+              <span class="practitioner-tile__name">Kate O&rsquo;Leary</span>
+              <span class="practitioner-tile__role">Chinese Medicine Practitioner / Acupuncturist / Reiki Practitioner / Yoga Facilitator</span>
+              <span class="practitioner-tile__summary">Classical acupuncture alongside yoga, Ayurvedic lifestyle and Oriental Medicine nutrition consultations.</span>
+              <span class="practitioner-tile__tags">
+                <span class="practitioner-tag">Menopause</span>
+                <span class="practitioner-tag">Fertility &amp; Perinatal</span>
+                <span class="practitioner-tag">Autoimmune &amp; Digestive</span>
+                <span class="practitioner-tag">Nutrition</span>
+                <span class="practitioner-tag">Pregnancy Yoga</span>
+              </span>
+              <span class="practitioner-tile__action">View full profile <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+
+          <a class="practitioner-tile fade-in" href="practitioners.html?practitioner=emily#practitioner-emily" data-practitioner-link="emily">
+            <span class="practitioner-tile__portrait">
+              <img src="images/emily-floreani.png" alt="Emily Floreani">
+            </span>
+            <span class="practitioner-tile__content">
+              <span class="practitioner-tile__name">Emily Floreani</span>
+              <span class="practitioner-tile__role">Chinese Medicine Practitioner / Acupuncturist / Yoga Teacher</span>
+              <span class="practitioner-tile__summary">Creating a space where you feel safe to heal, drawing on Traditional Chinese Medicine and Reiki.</span>
+              <span class="practitioner-tile__tags">
+                <span class="practitioner-tag">Women&rsquo;s Health</span>
+                <span class="practitioner-tag">Teen Menstrual Health</span>
+                <span class="practitioner-tag">Stress &amp; Overwhelm</span>
+                <span class="practitioner-tag">Nervous System</span>
+                <span class="practitioner-tag">Digestive Health</span>
+              </span>
+              <span class="practitioner-tile__action">View full profile <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+        </div>
       </div>
 
-      <div class="practitioners-grid">
+      <!-- Full practitioner profiles -->
+      <div class="practitioner-profiles">
         <!-- Practitioner 1: Charlotte -->
-        <div class="practitioner-card fade-in">
+        <article class="practitioner-profile" id="practitioner-charlotte" data-practitioner-profile="charlotte" hidden>
+        <button class="practitioner-back" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        <div class="practitioner-card">
           <div class="practitioner-card__image">
             <img src="images/charlotte.webp" alt="Charlotte Powell, Doctor of Chinese Medicine and Reiki practitioner">
           </div>
           <div class="practitioner-card__content">
-            <h2>Charlotte Powell</h2>
+            <h2 tabindex="-1">Charlotte Powell</h2>
             <p class="practitioner-card__title">Doctor of Chinese Medicine / Universal Healing (Reiki) Practitioner</p>
             <p class="practitioner-card__bio">
               Charlotte is a degree-qualified and AHPRA registered Doctor of Chinese Medicine and
@@ -140,14 +236,22 @@
             </nav>
           </div>
         </div>
+        <button class="practitioner-back practitioner-back--bottom" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        </article>
 
         <!-- Practitioner 2: Annabelle -->
-        <div class="practitioner-card fade-in">
+        <article class="practitioner-profile" id="practitioner-annabelle" data-practitioner-profile="annabelle" hidden>
+        <button class="practitioner-back" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        <div class="practitioner-card">
           <div class="practitioner-card__image">
             <img src="images/annabelle-boehm.jpg" alt="Annabelle Boehm - Acupuncturist and Universal Healing Practitioner">
           </div>
           <div class="practitioner-card__content">
-            <h2>Annabelle Boehm</h2>
+            <h2 tabindex="-1">Annabelle Boehm</h2>
             <p class="practitioner-card__title">Classical Chinese Medicine Practitioner / Acupuncturist / Reiki Practitioner</p>
             <p class="practitioner-card__bio">
               Annabelle is a Classical Chinese Medicine Practitioner, Acupuncturist, and Reiki
@@ -189,21 +293,29 @@
             </div>
             <p class="practitioner-card__rebate">Private health rebates may be available; please check with your health fund.</p>
             <nav class="practitioner-card__links" aria-label="Connect with Annabelle Boehm">
+              <a href="booking.html?practitioner=annabelle">Book with Annabelle <span aria-hidden="true">&rarr;</span></a>
               <a href="mailto:annabelle.acupuncture@gmail.com">annabelle.acupuncture@gmail.com</a>
               <a href="https://annabelleboehm.com" target="_blank" rel="noopener noreferrer">annabelleboehm.com <span aria-hidden="true">↗</span></a>
-              <a href="https://annabelle-boehm.au4.cliniko.com/bookings?business_id=1998430348085568745&amp;practitioner_id=1598992481846830972" target="_blank" rel="noopener noreferrer">Book with Annabelle <span aria-hidden="true">↗</span></a>
               <a href="https://www.instagram.com/annabelleboehm.acupuncture/" target="_blank" rel="noopener noreferrer">@annabelleboehm.acupuncture <span aria-hidden="true">↗</span></a>
             </nav>
           </div>
         </div>
+        <button class="practitioner-back practitioner-back--bottom" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        </article>
 
         <!-- Practitioner 3: Kate -->
-        <div class="practitioner-card fade-in">
+        <article class="practitioner-profile" id="practitioner-kate" data-practitioner-profile="kate" hidden>
+        <button class="practitioner-back" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        <div class="practitioner-card">
           <div class="practitioner-card__image">
             <img src="images/kate-oleary.jpg" alt="Kate O'Leary - Acupuncturist, Universal Healing Practitioner, and Yoga Facilitator">
           </div>
           <div class="practitioner-card__content">
-            <h2>Kate O'Leary</h2>
+            <h2 tabindex="-1">Kate O'Leary</h2>
             <p class="practitioner-card__title">Chinese Medicine Practitioner / Acupuncturist / Reiki Practitioner / Yoga Facilitator</p>
             <p class="practitioner-card__bio">
               Kate is a degree-qualified Chinese Medicine Practitioner and Acupuncturist with a
@@ -251,14 +363,22 @@
             </nav>
           </div>
         </div>
+        <button class="practitioner-back practitioner-back--bottom" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        </article>
 
         <!-- Practitioner 4: Emily -->
-        <div class="practitioner-card fade-in">
+        <article class="practitioner-profile" id="practitioner-emily" data-practitioner-profile="emily" hidden>
+        <button class="practitioner-back" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        <div class="practitioner-card">
           <div class="practitioner-card__image">
             <img src="images/emily-floreani.png" alt="Emily Floreani seated in The Qi Collective treatment space">
           </div>
           <div class="practitioner-card__content">
-            <h2>Emily Floreani</h2>
+            <h2 tabindex="-1">Emily Floreani</h2>
             <p class="practitioner-card__title">Chinese Medicine Practitioner / Acupuncturist / Yoga Teacher</p>
             <p class="practitioner-card__bio">
               Emily is a deeply passionate acupuncturist and yoga teacher who loves natural healing.
@@ -303,6 +423,10 @@
             </nav>
           </div>
         </div>
+        <button class="practitioner-back practitioner-back--bottom" type="button" data-practitioner-back>
+          <span aria-hidden="true">&larr;</span> All practitioners
+        </button>
+        </article>
 
       </div>
 
@@ -352,5 +476,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/practitioners.js"></script>
 </body>
 </html>
