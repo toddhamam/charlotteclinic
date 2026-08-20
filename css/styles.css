@@ -986,6 +986,12 @@ a:hover {
   margin: 0 auto;
 }
 
+/* Page headers carrying a full intro paragraph rather than a one-line tagline */
+.page-header--intro p {
+  max-width: 760px;
+  font-size: 1.12rem;
+}
+
 .page-header--sage {
   background-color: var(--color-sage);
   color: var(--color-white);
@@ -1278,18 +1284,179 @@ a:hover {
 /* ============================================
    Practitioners Page Styles
    ============================================ */
-.practitioners-intro {
-  max-width: 800px;
-  margin: 0 auto var(--space-xl);
+/* Gallery: pick a practitioner before reading a full profile */
+.practitioner-gallery__heading {
+  max-width: 640px;
+  margin: 0 auto var(--space-md);
   text-align: center;
-  font-size: 1.2rem;
-  color: var(--color-charcoal-light);
 }
 
-.practitioners-grid {
+.practitioner-gallery__heading h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.practitioner-gallery__heading h2:focus {
+  outline: none;
+}
+
+.practitioner-gallery__heading p {
+  color: var(--color-charcoal-light);
+  font-size: 1rem;
+}
+
+.practitioner-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+a.practitioner-tile {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--color-cream-dark);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  transition: opacity 0.8s ease-out,
+    transform var(--transition-smooth),
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+a.practitioner-tile:hover {
+  border-color: var(--color-sage);
+  box-shadow: 0 12px 34px rgba(0, 94, 90, 0.12);
+  color: var(--color-charcoal);
+  transform: translateY(-2px);
+}
+
+a.practitioner-tile:focus-visible {
+  outline: 3px solid rgba(0, 134, 127, 0.35);
+  outline-offset: 3px;
+  border-color: var(--color-sage-dark);
+}
+
+.practitioner-tile__portrait {
+  display: block;
+  overflow: hidden;
+  background-color: var(--color-cream-dark);
+}
+
+.practitioner-tile__portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.practitioner-tile[data-practitioner-link="charlotte"] .practitioner-tile__portrait img {
+  object-position: right top;
+}
+
+.practitioner-tile__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.35rem;
+}
+
+.practitioner-tile__name {
+  margin-bottom: 0.3rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.practitioner-tile__role {
+  margin-bottom: 0.65rem;
+  color: var(--color-sage-dark);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.practitioner-tile__summary {
+  margin-bottom: 0.85rem;
+  color: var(--color-charcoal-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.practitioner-tile__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.practitioner-tag {
+  padding: 0.3rem 0.7rem;
+  background-color: var(--color-cream);
+  color: var(--color-sage-dark);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.practitioner-tile__action {
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  color: var(--color-sage-dark);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.practitioner-tile__action span {
+  display: inline-block;
+  margin-left: 0.35rem;
+  transition: transform var(--transition-fast);
+}
+
+a.practitioner-tile:hover .practitioner-tile__action span {
+  transform: translateX(4px);
+}
+
+/* Full profiles: one at a time with JavaScript, all of them without it */
+.practitioner-profiles {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
+}
+
+.practitioner-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: var(--space-md);
+  padding: 0.35rem 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  color: var(--color-sage-dark);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.practitioner-back--bottom {
+  margin: var(--space-md) 0 0;
+}
+
+.practitioner-back:hover,
+.practitioner-back:focus-visible {
+  border-bottom-color: currentColor;
+}
+
+.practitioner-back:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 4px;
 }
 
 .practitioner-card {
@@ -1300,12 +1467,8 @@ a:hover {
   padding: var(--space-md);
 }
 
-.practitioner-card:nth-child(even) {
-  direction: rtl;
-}
-
-.practitioner-card:nth-child(even) > * {
-  direction: ltr;
+.practitioner-card__content h2:focus {
+  outline: none;
 }
 
 .practitioner-card__image {
@@ -2641,13 +2804,21 @@ a:hover {
     font-size: clamp(1.65rem, 7vw, 2rem);
   }
 
-  /* Practitioner cards responsive */
-  .practitioner-card {
+  /* Practitioner gallery + cards responsive */
+  .practitioner-gallery__grid {
     grid-template-columns: 1fr;
   }
 
-  .practitioner-card:nth-child(even) {
-    direction: ltr;
+  a.practitioner-tile {
+    grid-template-columns: 132px minmax(0, 1fr);
+  }
+
+  .practitioner-tile__content {
+    padding: 1.1rem;
+  }
+
+  .practitioner-card {
+    grid-template-columns: 1fr;
   }
 
   .practitioner-card__image img {
@@ -2737,6 +2908,15 @@ a:hover {
   .service-card,
   .specialty-detail {
     padding: var(--space-sm);
+  }
+
+  /* Stack the practitioner tiles so the portrait keeps its full width */
+  a.practitioner-tile {
+    grid-template-columns: 1fr;
+  }
+
+  .practitioner-tile__portrait {
+    height: 240px;
   }
 
   .booking-step {

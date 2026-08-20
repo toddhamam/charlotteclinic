@@ -93,6 +93,16 @@ charlotteclinic/
 
 ## Changelog
 
+### Practitioner Gallery and Online Booking for Annabelle and Kate
+- Added Annabelle Boehm to the booking portal with her eleven Cliniko appointment types grouped into Acupuncture, Acupuncture + Reiki, Cosmetic Acupuncture, Paediatric Acupuncture, and Cupping
+- Added Kate O'Leary to the booking portal with her four Cliniko appointment types grouped into Acupuncture, Acupuncture + Reiki, and Cupping; her Acupuncture × Reiki price is hidden in Cliniko, so the card shows the duration and defers the price to the booking page
+- Pointed the "Book with Annabelle" and "Book with Kate" links on the Practitioners page at the in-site booking flow, matching Charlotte and Emily
+- Every practitioner now has online booking, so the "setup coming soon" state no longer appears on the booking page
+- Reworked the Practitioners page into a gallery of portrait tiles showing each practitioner's role, approach, and focus areas, so the page stays short as the team grows
+- Selecting a tile opens that practitioner's existing full profile on its own, with "All practitioners" links at the top and bottom, shareable `?practitioner=` addresses, and working browser back/forward
+- Promoted the team paragraph into the Practitioners page subheadline, replacing the shorter tagline and lifting the gallery directly under the page header
+- Without JavaScript the gallery is skipped and every full profile is rendered as before
+
 ### Contact Email Domain Correction
 - Corrected the clinic contact address on the Contact page from `hello@thechicollective.com.au` to `hello@theqicollective.com.au`, updating both the `mailto:` link and the visible text
 - Audited every page for the misspelled domain; the Contact page held the only occurrence, and the practitioner addresses on the Practitioners page were already correct
