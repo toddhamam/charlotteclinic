@@ -93,6 +93,10 @@ charlotteclinic/
 
 ## Changelog
 
+### Contact Email Domain Correction
+- Corrected the clinic contact address on the Contact page from `hello@thechicollective.com.au` to `hello@theqicollective.com.au`, updating both the `mailto:` link and the visible text
+- Audited every page for the misspelled domain; the Contact page held the only occurrence, and the practitioner addresses on the Practitioners page were already correct
+
 ### Mobile Navigation Motion
 - Slowed the mobile drawer to a 1.5-second reveal with a synchronized closing delay for a calmer, brand-aligned transition
 - Reworked the six navigation links into an overlapping wave stagger, with each link gliding smoothly into place as the drawer settles
