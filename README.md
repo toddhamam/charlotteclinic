@@ -93,6 +93,18 @@ charlotteclinic/
 
 ## Changelog
 
+### Practitioner Titles, Bio, Pricing, and Booking Link Corrections
+- Fixed the Services page call to action, which said "Book a Consultation" but linked to the Contact page; it now goes to the booking page
+- Removed the four practice-scope notes from the bottom of the Specialties cards, including the copy about coordinating care with your GP or specialist
+- Changed Charlotte's role from "Doctor of Chinese Medicine / Universal Healing (Reiki) Practitioner" to "Classical Chinese Medicine Practitioner / Acupuncturist / Universal Healing (Reiki) Practitioner" across her gallery tile, full profile, booking selector, booking summary, and portrait alt text
+- Added "Classical" to Kate's role on her gallery tile, full profile, booking selector, and booking summary
+- Replaced Charlotte's profile biography with her supplied rewrite, which leads the commitment paragraph differently, adds Spiritual to her wellbeing interests, and introduces her recent further study in Chinese Herbal Medicine in place of the previous closing paragraph
+- Pointed the Instagram icon in every page footer at the clinic account `@theqicollective_` instead of Charlotte's personal account; the per-practitioner links inside each profile still point at their own accounts
+- Synced Charlotte's booking prices with Cliniko: initial acupuncture to $166, acupuncture follow-ups to $100 and $133, paediatric initial to $100, paediatric follow-up and cupping to $70, and Reiki 60 min to $144
+- Charlotte's Reiki 45 min has no published price in Cliniko, so the card now defers to "Price shown at booking" rather than showing a stale figure
+- Corrected two of Emily's prices that had also drifted: Acupuncture + Reiki to $120, and Cupping to "Price shown at booking" since Cliniko publishes no price for it
+- Booking prices are hardcoded in `booking.html` and do not update automatically when they change in Cliniko; they can be re-checked against the `data-price` attributes on each practitioner's public Cliniko booking page
+
 ### Practitioner Gallery and Online Booking for Annabelle and Kate
 - Added Annabelle Boehm to the booking portal with her eleven Cliniko appointment types grouped into Acupuncture, Acupuncture + Reiki, Cosmetic Acupuncture, Paediatric Acupuncture, and Cupping
 - Added Kate O'Leary to the booking portal with her four Cliniko appointment types grouped into Acupuncture, Acupuncture + Reiki, and Cupping; her Acupuncture × Reiki price is hidden in Cliniko, so the card shows the duration and defers the price to the booking page
