@@ -93,6 +93,13 @@ charlotteclinic/
 
 ## Changelog
 
+### Clean URLs Without the `.html` Extension
+- Added `vercel.json` enabling `cleanUrls`, so pages are served at `/practitioners` rather than `/practitioners.html`, and the homepage at `/`
+- Old addresses keep working: Vercel now issues a permanent redirect from `/practitioners.html` to `/practitioners`, so existing links, bookmarks, and search results are preserved rather than broken
+- Enabled `trailingSlash: false` so `/practitioners/` also redirects to the canonical `/practitioners`
+- Rewrote all 127 internal links across the seven pages to the extensionless form, including the query-string and anchor variants used by the practitioner gallery and booking flow, so in-site navigation never takes a redirect hop
+- No JavaScript changes were needed; the gallery and booking scripts derive their addresses from `window.location`, so shareable `?practitioner=` links follow the new form automatically
+
 ### Practitioner Titles, Bio, Pricing, and Booking Link Corrections
 - Fixed the Services page call to action, which said "Book a Consultation" but linked to the Contact page; it now goes to the booking page
 - Removed the four practice-scope notes from the bottom of the Specialties cards, including the copy about coordinating care with your GP or specialist
