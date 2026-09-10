@@ -93,6 +93,15 @@ charlotteclinic/
 
 ## Changelog
 
+### Prue Klausener Joins the Team, and New Portraits Throughout
+- Added Prue Klausener to the Practitioners page with her supplied biography, role, focus areas, portrait, and Instagram link; she is the fifth practitioner in the gallery
+- Prue's credential badges list AHPRA and CMBA registration only, since her AACMA membership has not been confirmed
+- Added Prue to the booking portal with her five Cliniko appointment types grouped into Acupuncture, Shiatsu Massage & Acupuncture, and Cupping & Shiatsu Massage, read from her public Cliniko page at `prue-klausener-acupuncture.au4.cliniko.com`
+- Swapped in new studio portraits for Charlotte, Annabelle, Kate, and Emily; all five practitioners now share the same 2:3 standing format
+- Renamed `charlotte.webp` to `charlotte-powell.jpg` and `emily-floreani.png` to `emily-floreani.jpg` to match the new files and the `firstname-lastname` convention
+- Because every portrait now has the subject's face in the upper third, the gallery tile, booking selector, and booking summary crops moved from `center top` to `center 20%`, which centres the faces where the crop is taller than it is wide (most visibly on mobile)
+- Removed the two `object-position: right top` overrides that existed only to rescue Charlotte's old off-centre portrait
+
 ### Clean URLs Without the `.html` Extension
 - Added `vercel.json` enabling `cleanUrls`, so pages are served at `/practitioners` rather than `/practitioners.html`, and the homepage at `/`
 - Old addresses keep working: Vercel now issues a permanent redirect from `/practitioners.html` to `/practitioners`, so existing links, bookmarks, and search results are preserved rather than broken
