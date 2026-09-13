@@ -93,6 +93,12 @@ charlotteclinic/
 
 ## Changelog
 
+### Clinic Signage Photo Beside the Contact Map
+- Added `images/qi-collective-signage.jpg`, the clinic's street sign at 22 Kensington Road, as a credibility cue on the Contact page until frontage and facade photography arrives
+- Moved the "Find Us" block out of the contact details column into a full-width row across the bottom of the same white card, so the map has room for the photo beside it
+- The row is a `2fr 1fr` grid: because the map frame is 4:3 and the photo is 2:3, the two columns resolve to exactly the same height, so the photo aligns with the map top and bottom without being cropped
+- Below 900px the row stacks, placing the photo under the map, capped at 360px wide and centred so the portrait image does not dominate small screens
+
 ### Team Portrait in the Homepage Welcome Section
 - Replaced the crystal-and-plant photo beside the "WELCOME TO THE QI COLLECTIVE" headline with a group portrait of the five practitioners in the Rose Park waiting space
 - Added `images/qi-collective-team.jpg` (1067x1600) and removed the now-unused `images/qi-collective-welcome.jpg`
