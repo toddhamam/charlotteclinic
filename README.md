@@ -93,6 +93,12 @@ charlotteclinic/
 
 ## Changelog
 
+### Team Portrait in the Homepage Welcome Section
+- Replaced the crystal-and-plant photo beside the "WELCOME TO THE QI COLLECTIVE" headline with a group portrait of the five practitioners in the Rose Park waiting space
+- Added `images/qi-collective-team.jpg` (1067x1600) and removed the now-unused `images/qi-collective-welcome.jpg`
+- The new photo matches the previous image's portrait ratio, so the about grid keeps its existing proportions and the image is still shown uncropped
+- Updated the alt text to describe the practitioners rather than the old still life
+
 ### Prue Klausener Joins the Team, and New Portraits Throughout
 - Added Prue Klausener to the Practitioners page with her supplied biography, role, focus areas, portrait, and Instagram link; she is the fifth practitioner in the gallery
 - Prue's credential badges list AHPRA and CMBA registration only, since her AACMA membership has not been confirmed
