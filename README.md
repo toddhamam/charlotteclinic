@@ -93,6 +93,12 @@ charlotteclinic/
 
 ## Changelog
 
+### Prue's Booking Links Point at the Rose Park Clinic
+
+- All six of Prue Klausener's Cliniko links on the booking page used `business_id=1604854723452609751`, which is her Bridgewater location at 17 Charlton Street rather than the clinic
+- Swapped every link to `business_id=2036206343697737049` (22 Kensington Road, Rose Park), so visitors see Rose Park availability instead of another practice's calendar
+- Her practitioner ID and all five appointment type IDs are unchanged; the same five services are offered at both locations at the same prices, so only the business needed correcting
+
 ### Clinic Signage Photo Beside the Contact Map
 - Added `images/qi-collective-signage.jpg`, the clinic's street sign at 22 Kensington Road, as a credibility cue on the Contact page until frontage and facade photography arrives
 - Moved the "Find Us" block out of the contact details column into a full-width row across the bottom of the same white card, so the map has room for the photo beside it
