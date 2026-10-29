@@ -93,6 +93,14 @@ charlotteclinic/
 
 ## Changelog
 
+### SEO/GEO Skill Installed
+
+- Added the SEO/GEO skill (v2.2.0) used in the healer-sites and funnel-builder repos at `.agents/skills/seo/`, with `.claude/skills/seo` symlinked to it and a `/seo` command in `.claude/commands/seo.md`
+- Removed the other two sites' own files (5D Publishing integration, Hermes daily brief, automatic implementation and KPI reporting) and kept funnel-builder's fix that makes `outcomes.py` compare actual report date ranges
+- Added `references/qi-collective.md`, covering the live domain, public pages, local search priorities, an AHPRA health advertising gate, and how to apply the skill to this static site
+- Checked file by file against the original `seo.zip`: 85 of 89 files are byte-identical, and the only differences are the four intentional ones above (integration pointer and work-it-through preference in `SKILL.md`, the `outcomes.py` fix and its note in `measure.md`)
+- No `.seo/` state, schedulers or connections were set up; the first `/seo` run in a session with Search Console access will create the starting files
+
 ### Prue's Booking Links Point at the Rose Park Clinic
 
 - All six of Prue Klausener's Cliniko links on the booking page used `business_id=1604854723452609751`, which is her Bridgewater location at 17 Charlton Street rather than the clinic

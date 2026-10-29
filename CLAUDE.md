@@ -50,6 +50,13 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 - Accessible desktop/mobile Services dropdown
 - SVG icons for scalability
 
+## SEO / GEO
+
+- Run `/seo` (or `/seo setup`, `/seo tech`, `/seo aeo audit`, etc.) to use the SEO/GEO skill
+- The skill lives in `.agents/skills/seo/`; `.claude/skills/seo` is a symlink to it
+- Site-specific scope, health advertising (AHPRA) gates and static-site conventions are in `.agents/skills/seo/references/qi-collective.md`
+- Operating state goes in `.seo/` (tracked in Git; never store credentials there)
+
 ## User Preferences
 
 - **Tone**: Personal, welcoming, authentic practitioner voice
