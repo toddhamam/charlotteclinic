@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Read-only Google Search Console client for the /seo skill. No dependencies.
-// Auth: service-account JSON, base64-encoded, in GOOGLE_SERVICE_ACCOUNT_JSON_B64.
+// Auth: GOOGLE_SERVICE_ACCOUNT_JSON_B64 via google.mjs.
 // Scope: webmasters.readonly only. Prints JSON to stdout; never prints the key.
 //
 //   node .agents/tools/gsc.mjs sites
@@ -11,68 +11,13 @@
 //
 // --site defaults to gsc.site_url in .seo/config.json.
 
-import { createSign } from 'node:crypto';
 import { readFileSync } from 'node:fs';
+import { accessToken, parseArgs, request, seoConfig } from './google.mjs';
 
 const SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
 const API = 'https://searchconsole.googleapis.com';
 
-function parseArgs(argv) {
-  const out = { _: [], url: [] };
-  for (let i = 0; i < argv.length; i++) {
-    const a = argv[i];
-    if (!a.startsWith('--')) { out._.push(a); continue; }
-    const k = a.slice(2), v = argv[++i];
-    if (k === 'url') out.url.push(v); else out[k] = v;
-  }
-  return out;
-}
-
-function credentials() {
-  const b64 = process.env.GOOGLE_SERVICE_ACCOUNT_JSON_B64;
-  if (!b64) throw new Error('GOOGLE_SERVICE_ACCOUNT_JSON_B64 is not set');
-  const j = JSON.parse(Buffer.from(b64, 'base64').toString('utf8'));
-  if (j.type !== 'service_account' || !j.client_email || !j.private_key) {
-    throw new Error('GOOGLE_SERVICE_ACCOUNT_JSON_B64 is not service-account JSON');
-  }
-  return j;
-}
-
-async function accessToken() {
-  const sa = credentials();
-  const b64url = (o) => Buffer.from(JSON.stringify(o)).toString('base64url');
-  const now = Math.floor(Date.now() / 1000);
-  const aud = sa.token_uri || 'https://oauth2.googleapis.com/token';
-  const unsigned = `${b64url({ alg: 'RS256', typ: 'JWT' })}.${b64url({
-    iss: sa.client_email, scope: SCOPE, aud, iat: now, exp: now + 3600,
-  })}`;
-  const sig = createSign('RSA-SHA256').update(unsigned).sign(sa.private_key, 'base64url');
-  const res = await fetch(aud, {
-    method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion: `${unsigned}.${sig}`,
-    }),
-  });
-  const body = await res.json();
-  if (!res.ok) throw new Error(`token: ${res.status} ${body.error || ''} ${body.error_description || ''}`);
-  return body.access_token;
-}
-
-async function call(token, method, path, payload) {
-  const res = await fetch(API + path, {
-    method,
-    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
-    body: payload ? JSON.stringify(payload) : undefined,
-  });
-  const body = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    const e = body.error || {};
-    throw new Error(`${method} ${path}: ${res.status} ${e.status || ''} ${e.message || ''}`);
-  }
-  return body;
-}
+const call = (token, method, path, payload) => request(token, method, API + path, payload);
 
 const ymd = (d) => d.toISOString().slice(0, 10);
 const daysAgo = (n) => new Date(Date.now() - n * 86400000);
@@ -84,16 +29,13 @@ function window(args) {
   return { startDate: ymd(daysAgo(days + 2)), endDate: ymd(daysAgo(3)) };
 }
 
-function defaultSite() {
-  try { return JSON.parse(readFileSync('.seo/config.json', 'utf8')).gsc?.site_url || null; }
-  catch { return null; }
-}
+const defaultSite = () => seoConfig().gsc?.site_url || null;
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const cmd = args._[0];
   const site = args.site || defaultSite();
-  const token = await accessToken();
+  const token = await accessToken(SCOPE);
   const enc = encodeURIComponent(site || '');
   const need = () => { if (!site) throw new Error('no --site and no gsc.site_url in .seo/config.json'); };
   let out;

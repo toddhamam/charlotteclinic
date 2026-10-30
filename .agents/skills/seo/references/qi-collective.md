@@ -72,3 +72,16 @@ node .agents/tools/gsc.mjs inspect                                # every <loc> 
 ```
 
 By default the 90-day window ends three days ago and uses finalised data only. `no_data: true` means Google has nothing to report yet, not zero traffic. Raw query and page rows stay in `.context/seo/`. Only aggregates (totals, per-page index status) go into `.seo/gsc/`. Where `tools.md` names MCP tools, use this client instead: `list_properties` maps to `sites`, `get_advanced_search_analytics` to `search`, `list_sitemaps_enhanced` to `sitemaps`, and `inspect_url_enhanced`/`batch_url_inspection` to `inspect`.
+
+## Google Analytics 4 client
+
+GA4 property `561626637` ("The Qi Collective", Australia/Adelaide) has one web stream: `G-5YPQG9WN7F`, ID `16234503403`. Its gtag is first in `<head>` on all seven pages and went live on 30 October 2026, so no data exists before that date. The same service account is a Viewer on the property and uses the same `GOOGLE_SERVICE_ACCOUNT_JSON_B64` key. `.agents/tools/ga4.mjs` requests only the `analytics.readonly` scope. Shared auth lives in `.agents/tools/google.mjs`.
+
+```sh
+node .agents/tools/ga4.mjs setup                                   # property, timezone, stream IDs
+node .agents/tools/ga4.mjs report --kind overview --days 90        # sessions, users, engaged sessions, views, key events
+node .agents/tools/ga4.mjs report --kind landing --organic --days 90 > .context/seo/ga4-landing-organic-$(date +%F).json
+node .agents/tools/ga4.mjs report --kind sources --days 28         # channel, source, medium; also --kind pages, --start/--end
+```
+
+Dates are in the property's timezone and end yesterday by default. Search Console dates are Pacific time, so don't join daily counts across the two. `no_data: true` means nothing has been recorded yet. No key events are configured, so `keyEvents` is not a booking count. Bookings complete on Cliniko, off-site. Raw source and page rows stay in `.context/seo/`, and only aggregates go into `.seo/`.

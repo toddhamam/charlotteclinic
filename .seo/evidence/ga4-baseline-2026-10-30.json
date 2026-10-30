@@ -1,0 +1,21 @@
+{
+  "source": "google_analytics_data_api",
+  "property": "properties/561626637",
+  "measurement_id": "G-5YPQG9WN7F",
+  "time_zone": "Australia/Adelaide",
+  "pulled": "2026-10-30",
+  "tag_live": "2026-10-30",
+  "note": "The GA4 tag went live on all seven pages on 2026-10-30 (PR #33). Empty reports mean no data yet, not zero visitors. There is no history before the tag. Raw rows live in .context/seo/ (gitignored).",
+  "reports": {
+    "overview_90d": "no_data",
+    "pages_90d": "no_data",
+    "landing_90d": "no_data",
+    "landing_organic_90d": "no_data",
+    "sources_90d": "no_data",
+    "overview_today": "no_data"
+  },
+  "sessions": null,
+  "engaged_sessions": null,
+  "key_events": null,
+  "key_events_configured": false
+}

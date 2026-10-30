@@ -66,7 +66,15 @@
     "tracker_id": null
   },
   "ga4": {
-    "property_id": null
+    "property_id": "561626637",
+    "measurement_id": "G-5YPQG9WN7F",
+    "stream_id": "16234503403",
+    "time_zone": "Australia/Adelaide",
+    "api_key_env": "GOOGLE_SERVICE_ACCOUNT_JSON_B64",
+    "permission": "Viewer",
+    "client": "node .agents/tools/ga4.mjs (read-only, analytics.readonly)",
+    "tag_live": "2026-10-30",
+    "_comment": "Verified 2026-10-30: the property web stream measurement ID matches the gtag on all seven pages. Data starts on the tag go-live date; nothing before it exists."
   },
   "competitors": [
     {
@@ -144,14 +152,14 @@
     "brand_tracking": false,
     "crawl_audit": false,
     "python3": true,
-    "ga4": false,
+    "ga4": true,
     "psi": true,
     "logs": false,
     "community_search": false,
     "social_posting": false,
     "browser": true,
     "git": true,
-    "_note": "2026-10-29: psi via local Lighthouse 12 CLI (npx) + google-chrome; keyless PageSpeed API returned 429. No GSC/GA4/Bing/DFS client in this host. 2026-10-30: Bing Webmaster API key verified (GetUserSites: verified property https://theqicollective.com.au/, imported from GSC). 2026-10-30: GSC API verified via service account (sites.list: sc-domain:theqicollective.com.au, siteFullUser); Search Analytics, sitemaps and URL Inspection reads succeeded."
+    "_note": "2026-10-29: psi via local Lighthouse 12 CLI (npx) + google-chrome; keyless PageSpeed API returned 429. No GSC/GA4/Bing/DFS client in this host. 2026-10-30: Bing Webmaster API key verified (GetUserSites: verified property https://theqicollective.com.au/, imported from GSC). 2026-10-30: GSC API verified via service account (sites.list: sc-domain:theqicollective.com.au, siteFullUser); Search Analytics, sitemaps and URL Inspection reads succeeded. 2026-10-30: GA4 property 561626637 verified via the same service account (Viewer); stream G-5YPQG9WN7F matches the site tag; runReport succeeded (no data yet, tag live the same day)."
   },
   "tools_declined": [],
   "cache": {
