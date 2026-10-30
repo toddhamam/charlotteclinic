@@ -93,6 +93,11 @@ charlotteclinic/
 
 ## Changelog
 
+### Google Analytics 4 Tag on Every Page
+
+- Added the Google tag for the clinic's GA4 web stream (Measurement ID `G-5YPQG9WN7F`) at the top of the `<head>` on all seven pages, so visits are counted in Google Analytics from the moment this is deployed
+- Nothing else changes for visitors. Booking-click events and a privacy notice are planned follow-ups
+
 ### Google Search Console Connected to the SEO Skill
 
 - Added `.agents/tools/gsc.mjs`, a small read-only Search Console client with no dependencies. It uses the healer-sites service account (key in the `GOOGLE_SERVICE_ACCOUNT_JSON_B64` Conductor environment variable, never in Git) and only the read-only scope. It is not deployed, because `.vercelignore` excludes `.agents/`
