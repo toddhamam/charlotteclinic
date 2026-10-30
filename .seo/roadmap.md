@@ -22,6 +22,7 @@
 - **Domain:** https://www.theqicollective.com.au (apex 308 → www)
 - **GSC property:** `sc-domain:theqicollective.com.au` (API via service account, 2026-10-30)
 - **Bing site:** `https://theqicollective.com.au/` (API key, 2026-10-30)
+- **GA4 property:** `561626637`, stream `G-5YPQG9WN7F` (tag live and API via service account, 2026-10-30)
 - **Authority / playable bucket:** unknown → easy (cold start, 2026-10-29)
 - **Stack:** static HTML/CSS/vanilla JS on Vercel, `cleanUrls: true`, `trailingSlash: false`
 - **Brand accent color:** #005E5A teal-deep, #DDBB72 gold
@@ -50,7 +51,7 @@ Found by the 2026-10-29 health diff and scripts:
 4. JSON-LD: `MedicalClinic`/`LocalBusiness` on home and contact (name, address, opening hours, email, `sameAs` Instagram), `Person` for practitioners, `BreadcrumbList` optional.
 5. Open Graph / Twitter tags for link previews.
 6. `llms.txt` summarising the clinic, its services and practitioners (passes the health advertising gate).
-7. Analytics (GA4 or Vercel Analytics) so outcomes can be measured. Needs the clinic's decision on which account (NY-5).
+7. Analytics (GA4 or Vercel Analytics) so outcomes can be measured. Done 2026-10-30: GA4 property 561626637, tag G-5YPQG9WN7F on all pages (PR #33), API connected.
 
 Verification gate: health diff shows 0 canonical/schema violations; Rich Results test passes; sitemap fetches 200.
 

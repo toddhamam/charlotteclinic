@@ -93,6 +93,12 @@ charlotteclinic/
 
 ## Changelog
 
+### Google Analytics 4 Connected to the SEO Skill
+
+- Added `.agents/tools/ga4.mjs`, a small read-only Google Analytics reader with no dependencies. It uses the same service account as the Search Console checker, with Viewer access and only the read-only scope. The shared sign-in code moved into `.agents/tools/google.mjs`
+- Recorded GA4 property `561626637` (stream `G-5YPQG9WN7F`) in `.seo/config.json` after checking that its stream matches the tag on the live site, and documented the commands in `.agents/skills/seo/references/qi-collective.md`
+- The first reports are empty because the tag only went live on 30 October 2026
+
 ### Google Analytics 4 Tag on Every Page
 
 - Added the Google tag for the clinic's GA4 web stream (Measurement ID `G-5YPQG9WN7F`) at the top of the `<head>` on all seven pages, so visits are counted in Google Analytics from the moment this is deployed
