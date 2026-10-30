@@ -56,6 +56,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 - The skill lives in `.agents/skills/seo/`; `.claude/skills/seo` is a symlink to it
 - Site-specific scope, health advertising (AHPRA) gates and static-site conventions are in `.agents/skills/seo/references/qi-collective.md`
 - Operating state goes in `.seo/` (tracked in Git; never store credentials there)
+- Connected (30 Oct 2026): Google Search Console `sc-domain:theqicollective.com.au` and GA4 property `561626637` (tag `G-5YPQG9WN7F` on every page), both read through `.agents/tools/gsc.mjs` / `ga4.mjs` with the `GOOGLE_SERVICE_ACCOUNT_JSON_B64` key from the Conductor repository environment; Bing Webmaster via `BING_WEBMASTER_API_KEY`. Raw report rows go only in `.context/seo/`
 
 ## User Preferences
 

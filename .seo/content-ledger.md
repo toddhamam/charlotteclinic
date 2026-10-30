@@ -8,6 +8,7 @@
 
 | Date | Title | Type | Slug / URL | Target keyword | Vol | Bucket | Original data (source · n · as-of) | Refresh due | Primary internal links | Commit / PR |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-30 | Services heading spelling: "Pediatric Acupuncture" → "Paediatric Acupuncture" (correct; pre-state: US spelling in the h2, truth rule failing) | correct | https://www.theqicollective.com.au/services | – | – | – | none | n/a | – | uncommitted (branch toddhamam/seo-run-2026-10-30b) |
 | 2026-10-30 | Practitioners schema: embed clinic node for worksFor (repair) | repair | https://www.theqicollective.com.au/practitioners | – | – | – | none | n/a | – | branch toddhamam/seo-schema-worksfor |
 | 2026-10-30 | Phase 0 crawl/index foundations (repair) | repair | https://www.theqicollective.com.au/ (all 7 pages) + /sitemap.xml + /robots.txt | – | – | – | none | n/a | – | #29 |
 
