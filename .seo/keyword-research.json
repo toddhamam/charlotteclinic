@@ -1,0 +1,8 @@
+{
+  "baseline": {"domain_rating": null, "source": "none", "as_of": "2026-10-29", "note": "No DataForSEO or other keyword tool connected; manual-research mode."},
+  "difficulty": {"playable_bucket": "easy", "kd_source": null, "derived_at": "2026-10-29", "evidence": ["cold start: no Search Console connection, no rankings known"]},
+  "gsc_baseline": {"clicks_90d": null, "impressions_90d": null, "avg_position": null, "as_of": "2026-10-29", "note": "Search Console not connected; unmeasured, not zero."},
+  "web_presence_check": {"as_of": "2026-10-29", "method": "host web search (US index, not Google AU)", "queries": ["\"The Qi Collective\" Rose Park acupuncture", "acupuncture Rose Park Norwood Adelaide clinic"], "result": "No result mentioned The Qi Collective. Local results dominated by Fresha, Yellow Pages, Healthdirect, Bookwell directories; Wellspring Acupuncture Clinic (50 Kensington Rd) was the most-listed local clinic."},
+  "clusters": {},
+  "candidates": []
+}
