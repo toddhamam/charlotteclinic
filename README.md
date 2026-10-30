@@ -93,6 +93,11 @@ charlotteclinic/
 
 ## Changelog
 
+### Internal Files No Longer Published on the Website
+
+- Added `.vercelignore` so Vercel stops deploying `.seo/`, `.agents/`, `.claude/`, `.context/`, `CLAUDE.md` and `README.md`. Because the site is static, every repository file was being published, so the SEO working notes (draft brand notes, the health-claim review queue, config) were readable at URLs like `/.seo/needs-you.md`
+- No credentials were exposed; the Bing key and Google service-account key have never been committed
+
 ### Search Engine Foundations: Sitemap, Canonicals and Structured Data
 
 - Added `sitemap.xml` (the seven pages at their clean URLs, with no build-date `lastmod`) and `robots.txt` pointing to it. Before this, both returned 404
