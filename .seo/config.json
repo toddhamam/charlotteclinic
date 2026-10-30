@@ -47,8 +47,13 @@
     }
   },
   "gsc": {
-    "site_url": null,
-    "_comment": "The EXACT property string from list_properties. 'sc-domain:example.com' and 'https://example.com/' are not interchangeable. null means the site is not verified in this Google account — say it once and carry on."
+    "site_url": "sc-domain:theqicollective.com.au",
+    "api_key_env": "GOOGLE_SERVICE_ACCOUNT_JSON_B64",
+    "service_account": "outreach-sheets-writer@healer-sites-outreach.iam.gserviceaccount.com",
+    "permission": "siteFullUser",
+    "client": "node .agents/tools/gsc.mjs (read-only, webmasters.readonly)",
+    "_comment": "The EXACT property string from list_properties. 'sc-domain:example.com' and 'https://example.com/' are not interchangeable. null means the site is not verified in this Google account — say it once and carry on.",
+    "_key_location": "Not in Git. Base64 service-account JSON injected through the charlotteclinic Conductor repository environment; never store the key in .seo/."
   },
   "bing": {
     "api_key_env": "BING_WEBMASTER_API_KEY",
@@ -131,7 +136,7 @@
     "_comment": "null means AI-crawler evidence runs on Search Console alone. Any report must say so."
   },
   "tools_detected": {
-    "gsc": false,
+    "gsc": true,
     "bing_webmaster": true,
     "dfs": false,
     "openseo": false,
@@ -146,7 +151,7 @@
     "social_posting": false,
     "browser": true,
     "git": true,
-    "_note": "2026-10-29: psi via local Lighthouse 12 CLI (npx) + google-chrome; keyless PageSpeed API returned 429. No GSC/GA4/Bing/DFS client in this host. 2026-10-30: Bing Webmaster API key verified (GetUserSites: verified property https://theqicollective.com.au/, imported from GSC)."
+    "_note": "2026-10-29: psi via local Lighthouse 12 CLI (npx) + google-chrome; keyless PageSpeed API returned 429. No GSC/GA4/Bing/DFS client in this host. 2026-10-30: Bing Webmaster API key verified (GetUserSites: verified property https://theqicollective.com.au/, imported from GSC). 2026-10-30: GSC API verified via service account (sites.list: sc-domain:theqicollective.com.au, siteFullUser); Search Analytics, sitemaps and URL Inspection reads succeeded."
   },
   "tools_declined": [],
   "cache": {
