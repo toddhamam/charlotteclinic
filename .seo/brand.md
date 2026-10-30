@@ -6,7 +6,7 @@
 
 - **Name:** The Qi Collective (formerly Charlotte Clinic)
 - **One-liner (≤20 words):** A multidisciplinary acupuncture and Chinese medicine clinic in Rose Park, Adelaide, offering calm, whole-person care. *(inferred — unconfirmed)*
-- **What we do:** Five AHPRA-registered Chinese medicine practitioners offering acupuncture, cupping, Chinese herbal medicine, Chinese dietetics, cosmetic acupuncture, paediatric acupuncture, Reiki/Universal Healing, Shiatsu, plus Qigong movement classes and workshops. Founded by Charlotte Powell. Source: `services.html`, `practitioners.html`, `about.html`.
+- **What we do:** Four AHPRA-registered Chinese medicine practitioners offering acupuncture, cupping, Chinese herbal medicine, Chinese dietetics, cosmetic acupuncture, paediatric acupuncture, Reiki/Universal Healing, Shiatsu, plus Qigong movement classes and workshops. Founded by Charlotte Powell. Source: `services.html`, `practitioners.html`, `about.html`.
 - **Pricing structure:** Per-appointment, set per practitioner in Cliniko. Initial acupuncture $150–$166 (75 min); follow-ups $100–$133; cupping $70; paediatric initial $100. Private health rebates may be available. Source: `booking.html` (see `truth.md`).
 - **Free tier?** No. Free enquiry via the contact form.
 
@@ -53,7 +53,7 @@ Proposed, not confirmed (needs-you NY-1). The clinic knows who it actually loses
 
 *(inferred — unconfirmed)*
 
-1. A collective of five registered practitioners under one roof, so patients can choose by focus area (fertility, menopause, teen menstrual health, endometriosis, cosmetic).
+1. A collective of four registered practitioners under one roof, so patients can choose by focus area (fertility, menopause, endometriosis, cosmetic).
 2. Classical Chinese medicine training, including the 68-channel Classical Acupuncture system (Annabelle), Japanese-influenced acupuncture and Shiatsu (Prue).
 3. Acupuncture combined with Reiki, yoga and energy work for a body–mind–spirit approach.
 4. Qigong movement classes and workshops alongside one-to-one treatment.
@@ -65,7 +65,7 @@ Proposed, not confirmed (needs-you NY-1). The clinic knows who it actually loses
 - **Off-limits — never publish:** any patient information, individual outcomes, testimonials about treatment results, Cliniko booking data at individual level.
 - **First-hand experience / things we've actually done:** practitioners' years in practice and training (bios on `practitioners.html`).
 - **Original research we can run:** practitioner Q&As and "what to expect" explainers written from real clinic practice.
-- **Internal experts we can attribute/quote:** Charlotte Powell, Annabelle Boehm, Kate O'Leary, Emily Floreani, Prue Klausener.
+- **Internal experts we can attribute/quote:** Charlotte Powell, Annabelle Boehm, Kate O'Leary, Prue Klausener.
 
 ## Author / E-E-A-T
 

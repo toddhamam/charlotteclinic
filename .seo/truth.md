@@ -13,12 +13,12 @@ practitioners.html or contact.html change, and whenever the clinic reports a Cli
 | Phone | none published on the site | absent from all pages | 2026-10-29 |
 | Hours | Mon–Fri 8am–6pm · Sat 8am–3pm · Sun closed | contact.html:98-102 | 2026-10-29 |
 | Founder | Charlotte Powell | about.html | 2026-10-29 |
-| Practitioners | Charlotte Powell, Annabelle Boehm, Kate O'Leary, Emily Floreani, Prue Klausener (5) | practitioners.html | 2026-10-29 |
-| Registration | All five shown as AHPRA registered, AACMA member, CMBA registered | practitioners.html credential badges | 2026-10-29 |
+| Practitioners | Charlotte Powell, Annabelle Boehm, Kate O'Leary, Prue Klausener (4; Emily Floreani left, removed in #27) | practitioners.html | 2026-10-30 |
+| Registration | All four AHPRA and CMBA registered; AACMA badge on Charlotte, Annabelle, Kate (not Prue) | practitioners.html credential badges | 2026-10-30 |
 | "Doctor" title | Charlotte: "AHPRA registered Doctor of Chinese Medicine" (README says "Doctor of Traditional Chinese Medicine") | practitioners.html:206, README.md | 2026-10-29 |
 | Booking | Online via each practitioner's Cliniko page; Rose Park business for every practitioner | booking.html | 2026-10-29 |
-| Initial acupuncture price | Charlotte $166 (75m) · Annabelle $160 (75m) · Kate $150 (75m) · Emily $150 (75m) · Prue $160 (90m) | booking.html | 2026-10-29 |
-| Follow-up acupuncture price | Charlotte $100 (45m) / $133 (60m) · Annabelle $120 (60m) · Kate $120 · Emily $120 · Prue $120 | booking.html | 2026-10-29 |
+| Initial acupuncture price | Charlotte $166 (75m) · Annabelle $160 (75m) · Kate $150 (75m) · Prue $160 (90m) | booking.html | 2026-10-29 |
+| Follow-up acupuncture price | Charlotte $100 (45m) / $133 (60m) · Annabelle $120 (60m) · Kate $120 · Prue $120 | booking.html | 2026-10-29 |
 | Cupping | $70 (30m) where priced | booking.html | 2026-10-29 |
 | Paediatric | Initial $100 (45m), follow-up $70 (30m), Charlotte and Annabelle | booking.html | 2026-10-29 |
 | Cosmetic acupuncture | Annabelle $180 initial / $150 follow-up · Prue $170 | booking.html | 2026-10-29 |

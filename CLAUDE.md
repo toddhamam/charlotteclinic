@@ -12,7 +12,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 ## Project Structure
 
 ```
-├── index.html          # Homepage with Qi hero, welcome, mission, services, and specialties
+├── index.html          # Homepage with Qi hero, welcome, mission, services, specialties, and Instagram feed
 ├── about.html          # About page
 ├── services.html       # Services offered
 ├── specialties.html    # Treatment specialties
@@ -22,7 +22,7 @@ A static website for The Qi Collective acupuncture clinic (formerly Charlotte Cl
 ├── css/
 │   └── styles.css      # Main stylesheet (organized by section)
 ├── js/
-│   ├── main.js         # Navigation, animations, and contact form behaviour
+│   ├── main.js         # Navigation, animations, Instagram feed, and contact form behaviour
 │   └── booking.js      # Booking system logic
 └── images/             # Site images
 ```

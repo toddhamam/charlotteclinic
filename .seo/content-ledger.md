@@ -70,7 +70,7 @@
 | Paediatric acupuncture | /services, /specialties | two short sections | |
 | Cosmetic acupuncture | /services | one section | |
 | Cupping, herbal, dietetics, Reiki, Qigong | /services | short sections | |
-| Practitioners | /practitioners | five full bios | |
+| Practitioners | /practitioners | four full bios (Emily Floreani removed 2026-10-30) | |
 
 Pre-existing pages (7, live before the ledger) are not backfilled as Shipped rows: they were not shipped by this skill and have no Search Console reads. The census tracks them from the 2026-10-29 health fingerprint.
 

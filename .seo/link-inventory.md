@@ -28,7 +28,6 @@
 | Charlotte Powell | /practitioners?practitioner=charlotte#practitioner-charlotte | /booking?practitioner=charlotte |
 | Annabelle Boehm | /practitioners?practitioner=annabelle#practitioner-annabelle | /booking?practitioner=annabelle |
 | Kate O'Leary | /practitioners?practitioner=kate#practitioner-kate | /booking?practitioner=kate |
-| Emily Floreani | /practitioners?practitioner=emily#practitioner-emily | /booking?practitioner=emily |
 | Prue Klausener | /practitioners?practitioner=prue#practitioner-prue | /booking?practitioner=prue |
 
 ### Content (blog / guides)
