@@ -93,6 +93,12 @@ charlotteclinic/
 
 ## Changelog
 
+### Google Search Console Connected to the SEO Skill
+
+- Added `.agents/tools/gsc.mjs`, a small read-only Search Console client with no dependencies. It uses the healer-sites service account (key in the `GOOGLE_SERVICE_ACCOUNT_JSON_B64` Conductor environment variable, never in Git) and only the read-only scope. It is not deployed, because `.vercelignore` excludes `.agents/`
+- Recorded the verified property `sc-domain:theqicollective.com.au` in `.seo/config.json` and documented the commands in `.agents/skills/seo/references/qi-collective.md`
+- First reading (`.seo/gsc/baseline-2026-10-30.json`): Google has indexed the Home, About and Specialties pages. Services, Practitioners and Contact are discovered but not yet indexed, and Booking is unknown to Google. The sitemap was read with no errors. There is no search performance data for the last 90 days yet
+
 ### Internal Files No Longer Published on the Website
 
 - Added `.vercelignore` so Vercel stops deploying `.seo/`, `.agents/`, `.claude/`, `.context/`, `CLAUDE.md` and `README.md`. Because the site is static, every repository file was being published, so the SEO working notes (draft brand notes, the health-claim review queue, config) were readable at URLs like `/.seo/needs-you.md`

@@ -1,0 +1,81 @@
+{
+  "source": "google_search_console_api",
+  "site_url": "sc-domain:theqicollective.com.au",
+  "pulled": "2026-10-30",
+  "note": "90-day web search, finalised data only. Zero rows means Google has no Search Analytics data for the property yet, not zero traffic. Re-check with --state all (fresh data, 2026-07-01..2026-10-30) also returned 0 rows. Raw rows live in .context/seo/ (gitignored).",
+  "search_analytics": {
+    "start_date": "2026-07-30",
+    "end_date": "2026-10-27",
+    "data_state": "final",
+    "status": "no_data",
+    "clicks": null,
+    "impressions": null,
+    "ctr": null,
+    "avg_position": null,
+    "page_rows": 0,
+    "query_rows": 0
+  },
+  "sitemaps": [
+    {
+      "path": "https://www.theqicollective.com.au/sitemap.xml",
+      "last_submitted": "2026-10-30T06:49:13.632Z",
+      "last_downloaded": "2026-10-30T06:49:15.347Z",
+      "errors": 0,
+      "warnings": 0,
+      "submitted": 7,
+      "indexed_reported": 0
+    }
+  ],
+  "index_status": {
+    "/": {
+      "verdict": "PASS",
+      "coverage_state": "Submitted and indexed",
+      "last_crawled": "2026-10-23",
+      "google_canonical_matches": true,
+      "in_sitemap_per_google": true
+    },
+    "/about": {
+      "verdict": "PASS",
+      "coverage_state": "Submitted and indexed",
+      "last_crawled": "2026-09-17",
+      "google_canonical_matches": true,
+      "in_sitemap_per_google": true
+    },
+    "/services": {
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "last_crawled": null,
+      "google_canonical_matches": null,
+      "in_sitemap_per_google": true
+    },
+    "/specialties": {
+      "verdict": "PASS",
+      "coverage_state": "Submitted and indexed",
+      "last_crawled": "2026-09-18",
+      "google_canonical_matches": true,
+      "in_sitemap_per_google": false
+    },
+    "/practitioners": {
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "last_crawled": null,
+      "google_canonical_matches": null,
+      "in_sitemap_per_google": true
+    },
+    "/booking": {
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "last_crawled": null,
+      "google_canonical_matches": null,
+      "in_sitemap_per_google": false
+    },
+    "/contact": {
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "last_crawled": null,
+      "google_canonical_matches": null,
+      "in_sitemap_per_google": true
+    }
+  },
+  "indexed_count": 3
+}

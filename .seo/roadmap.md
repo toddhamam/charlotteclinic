@@ -20,8 +20,8 @@
 ### 1. Site facts
 
 - **Domain:** https://www.theqicollective.com.au (apex 308 → www)
-- **GSC property:** not connected
-- **Bing site:** not connected
+- **GSC property:** `sc-domain:theqicollective.com.au` (API via service account, 2026-10-30)
+- **Bing site:** `https://theqicollective.com.au/` (API key, 2026-10-30)
 - **Authority / playable bucket:** unknown → easy (cold start, 2026-10-29)
 - **Stack:** static HTML/CSS/vanilla JS on Vercel, `cleanUrls: true`, `trailingSlash: false`
 - **Brand accent color:** #005E5A teal-deep, #DDBB72 gold

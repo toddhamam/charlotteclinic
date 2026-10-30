@@ -55,3 +55,20 @@ Installation on 29 October 2026 copied the skill only. It created no `.seo/` fou
 At installation the site had no analytics tag, `sitemap.xml`, `robots.txt`, structured data, Open Graph tags or canonical links. Search Console, GA4, Bing Webmaster and Business Profile access were unverified. Detect actual connections with `references/setup.md` in the operating session; never infer a property from the domain. Keep credentials in the normal secret mechanism, never in `.seo/` or skill files. The paid-call budget starts at zero; every paid research batch needs a stated cost and explicit approval.
 
 The first foundation run should seed brand context, truth claims and competitors from the repository and the clinic's answers rather than inventing them. Leave the questions the repository cannot answer (target services, catchment suburbs, competitors, Business Profile ownership, blog appetite) in `.seo/needs-you.md`.
+
+## Search Console client
+
+Search Console is connected through a service account, not an MCP server. The property is the domain property `sc-domain:theqicollective.com.au` (stored in `.seo/config.json` as `gsc.site_url`). The account `outreach-sheets-writer@healer-sites-outreach.iam.gserviceaccount.com` (project `healer-sites-outreach`, shared with the healer-sites repo) is a Full user on it. Its base64-encoded JSON key arrives through the charlotteclinic Conductor repository environment as `GOOGLE_SERVICE_ACCOUNT_JSON_B64`. Vercel environment variables do not reach a workspace, and a variable added after a workspace started needs a new session. Never print, log or commit the key.
+
+`.agents/tools/gsc.mjs` is a dependency-free Node client. It signs a JWT with Node's built-in crypto and requests only the `webmasters.readonly` scope, so it cannot submit sitemaps, request indexing or change settings. Run it from the repository root. It prints JSON to stdout, so redirect raw output to the gitignored `.context/seo/`:
+
+```sh
+node .agents/tools/gsc.mjs sites                                  # properties + permission level
+node .agents/tools/gsc.mjs search --dim page  --days 90 > .context/seo/gsc-page-$(date +%F).json
+node .agents/tools/gsc.mjs search --dim query --days 90 > .context/seo/gsc-query-$(date +%F).json
+node .agents/tools/gsc.mjs search --dim none  --days 90           # totals; also --dim date, --start/--end, --state all
+node .agents/tools/gsc.mjs sitemaps
+node .agents/tools/gsc.mjs inspect                                # every <loc> in sitemap.xml; or --url <url>
+```
+
+By default the 90-day window ends three days ago and uses finalised data only. `no_data: true` means Google has nothing to report yet, not zero traffic. Raw query and page rows stay in `.context/seo/`. Only aggregates (totals, per-page index status) go into `.seo/gsc/`. Where `tools.md` names MCP tools, use this client instead: `list_properties` maps to `sites`, `get_advanced_search_analytics` to `search`, `list_sitemaps_enhanced` to `sitemaps`, and `inspect_url_enhanced`/`batch_url_inspection` to `inspect`.
