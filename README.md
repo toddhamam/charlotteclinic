@@ -93,6 +93,16 @@ charlotteclinic/
 
 ## Changelog
 
+### Instagram Feed on the Homepage: "A Space Where Qi Flows"
+- Added a section between "Areas of Special Interest" and the footer. The clinic's latest Instagram posts drift slowly sideways as cards styled like real Instagram posts (profile bar, photo, like/comment/share/save icons, caption), with a "Follow along" button
+- Live posts come from a Behold JSON feed (`data-feed-url` on the section). Only the data is used, so no Behold branding appears; the site draws every card itself. The connected account is @theqicollective_, authorised by the clinic through Behold's client link
+- The feed is only requested when a visitor scrolls near the section, keeping well inside the free plan's 1,200 loads a month. The free plan returns the 6 latest posts, updated daily
+- Photos keep their own shape (Instagram's 3:4 portrait up to 1.91:1 landscape); reels show the reel icon and carousels show a "1/n" badge. Captions are inserted as plain text
+- The script also reads Simpleembed feeds, so switching providers only means changing the feed URL
+- Eight hand-built posts in `index.html` act as the fallback if the feed is unavailable, and as the template that live posts are cloned from
+- Short feeds are repeated, then doubled, so the drift loops seamlessly on wide screens. Only the first copy of each post can be focused or read by screen readers
+- The drift pauses on hover and keyboard focus. With "reduce motion" turned on, the feed is a still row that can be swiped
+
 ### Emily Floreani Removed from the Site
 - Emily has left the clinic, so her gallery tile and full profile are gone from the Practitioners page, leaving Charlotte, Annabelle, Kate, and Prue in a 2x2 grid
 - Removed her practitioner card and services panel, including all her Cliniko booking links, from the booking portal so visitors can no longer book with her

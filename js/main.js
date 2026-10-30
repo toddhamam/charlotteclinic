@@ -34,6 +34,136 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // ============================================
+  // Instagram Feed
+  // ============================================
+  // The hand-built posts in the HTML are the fallback. When the section has a
+  // data-feed-url (a Behold or Simpleembed JSON feed), live posts replace them as the section
+  // nears the viewport, so the feed is only requested by visitors who reach it.
+  const socialFeed = document.querySelector('.social-feed');
+
+  if (socialFeed) {
+    const feedTrack = socialFeed.querySelector('.social-feed__track');
+    const feedUrl = socialFeed.dataset.feedUrl;
+    const MIN_POSTS = 10;
+    const MAX_POSTS = 12;
+
+    function postMarkup() {
+      // Reuse the first hand-built post as the template, so live posts match exactly.
+      const template = feedTrack.querySelector('li').cloneNode(true);
+      template.querySelector('.ig-post__media').innerHTML = '';
+      return template;
+    }
+
+    // Accepts posts from either a Behold or a Simpleembed JSON feed.
+    function normalisePost(post) {
+      const size = post.sizes && post.sizes.medium;
+      return {
+        permalink: post.permalink,
+        imageUrl: post.imageUrl || (size && size.mediaUrl) || post.thumbnailUrl || post.mediaUrl,
+        width: size && size.width,
+        height: size && size.height,
+        alt: post.altText,
+        caption: post.prunedCaption || post.caption || '',
+        isVideo: post.mediaType === 'VIDEO' || Boolean(post.isReel),
+        slides: post.childCount || (post.children ? post.children.length : 0)
+      };
+    }
+
+    // Show the whole image at its own ratio, within Instagram's 3:4 to 1.91:1 range.
+    function setRatio(media, width, height) {
+      if (!width || !height) return;
+      media.style.aspectRatio = String(Math.min(Math.max(width / height, 0.75), 1.91));
+    }
+
+    function buildPost(template, post) {
+      const item = template.cloneNode(true);
+      const link = item.querySelector('.ig-post');
+      const media = item.querySelector('.ig-post__media');
+      const image = document.createElement('img');
+
+      link.href = post.permalink;
+      image.src = post.imageUrl;
+      image.alt = post.alt || 'Instagram post from The Qi Collective';
+      image.loading = 'lazy';
+      media.appendChild(image);
+
+      if (post.width && post.height) {
+        setRatio(media, post.width, post.height);
+      } else {
+        image.addEventListener('load', () => setRatio(media, image.naturalWidth, image.naturalHeight), { once: true });
+      }
+
+      if (post.isVideo) {
+        media.insertAdjacentHTML('beforeend', '<svg class="ig-post__reel" aria-hidden="true"><use href="#ig-reel"/></svg>');
+      } else if (post.slides > 1) {
+        const count = document.createElement('span');
+        count.className = 'ig-post__count';
+        count.setAttribute('aria-hidden', 'true');
+        count.textContent = `1/${post.slides}`;
+        media.appendChild(count);
+      }
+
+      const caption = item.querySelector('.ig-post__caption');
+      const handle = caption.querySelector('b');
+      caption.textContent = ` ${post.caption}`;
+      caption.prepend(handle);
+
+      return item;
+    }
+
+    function startDrift() {
+      if (prefersReducedMotion.matches) return;
+
+      // Repeat short feeds (and keep an even count for the staggered layout) so
+      // one set is always wider than the screen, then double it for a seamless loop.
+      const originals = Array.from(feedTrack.children);
+      while (feedTrack.children.length < MIN_POSTS || feedTrack.children.length % 2) {
+        originals.forEach(item => feedTrack.appendChild(item.cloneNode(true)));
+      }
+
+      Array.from(feedTrack.children).forEach(item => feedTrack.appendChild(item.cloneNode(true)));
+
+      // Only the original posts are announced and focusable; the repeats are decorative.
+      Array.from(feedTrack.children).slice(originals.length).forEach(item => {
+        item.setAttribute('aria-hidden', 'true');
+        item.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
+      });
+
+      socialFeed.classList.add('is-drifting');
+    }
+
+    function loadLiveFeed() {
+      return fetch(feedUrl)
+        .then(response => {
+          if (!response.ok) throw new Error(`Feed request failed: ${response.status}`);
+          return response.json();
+        })
+        .then(feed => {
+          const posts = (feed.posts || []).map(normalisePost).filter(post => post.permalink && post.imageUrl).slice(0, MAX_POSTS);
+          if (!posts.length) return;
+
+          const template = postMarkup();
+          feedTrack.replaceChildren(...posts.map(post => buildPost(template, post)));
+        })
+        .catch(() => {
+          // Keep the hand-built posts if the feed is unavailable.
+        });
+    }
+
+    if (!feedUrl) {
+      startDrift();
+    } else {
+      const feedObserver = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) return;
+        feedObserver.disconnect();
+        loadLiveFeed().then(startDrift);
+      }, { rootMargin: '600px 0px' });
+
+      feedObserver.observe(socialFeed);
+    }
+  }
+
   // Mobile Navigation Toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navList = document.querySelector('.nav__list');
