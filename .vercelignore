@@ -1,0 +1,7 @@
+# Repository tooling and working notes: never publish these on the website
+.seo
+.agents
+.claude
+.context
+CLAUDE.md
+README.md
