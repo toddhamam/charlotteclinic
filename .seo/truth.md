@@ -55,5 +55,5 @@ the skill edits them. These are flagged for review, not confirmed breaches. They
 | Claim | Code says | Site says | Which is right |
 |---|---|---|---|
 | Doctor title wording | README: "Doctor of Traditional Chinese Medicine (TCM)" | practitioners.html: "Doctor of Chinese Medicine" | Site wording is used publicly; confirm with Charlotte |
-| Spelling of paediatric | services.html heading: "Pediatric Acupuncture" | everywhere else: "Paediatric" | "Paediatric" (Australian English) |
+| Spelling of paediatric | services.html heading: "Pediatric Acupuncture" | everywhere else: "Paediatric" | "Paediatric" (Australian English). Corrected in services.html 2026-10-30; the production check follows the merge |
 | Business name in directories | site: The Qi Collective | web search 2026-10-29 found no listing under the new name | Unknown: Google Business Profile and directories not checked (no access) |
