@@ -8,7 +8,8 @@
 
 | Date | Title | Type | Slug / URL | Target keyword | Vol | Bucket | Original data (source · n · as-of) | Refresh due | Primary internal links | Commit / PR |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2026-10-30 | Phase 0 crawl/index foundations (repair) | repair | https://www.theqicollective.com.au/ (all 7 pages) + /sitemap.xml + /robots.txt | – | – | – | none | n/a | – | branch toddhamam/seo-measure-baseline (PR) |
+| 2026-10-30 | Practitioners schema: embed clinic node for worksFor (repair) | repair | https://www.theqicollective.com.au/practitioners | – | – | – | none | n/a | – | branch toddhamam/seo-schema-worksfor |
+| 2026-10-30 | Phase 0 crawl/index foundations (repair) | repair | https://www.theqicollective.com.au/ (all 7 pages) + /sitemap.xml + /robots.txt | – | – | – | none | n/a | – | #29 |
 
 <!-- Append one row per piece at Step 5. Type ∈ guide | how-to | listicle | definition | comparison | data-study | resource | opinion | case-study | tool -->
 <!-- Tools: add a maintenance note to the row for anything with decaying data (fee schedules, rates, limits) — what expires and roughly when. -->
