@@ -6,7 +6,7 @@
 
 | # | Phase | Pattern | Status | PR |
 |---|---|---|---|---|
-| 0 | Technical foundations | Setup | pending | – |
+| 0 | Technical foundations | Setup | in_progress: items 1–5 done 2026-10-30 (sitemap, robots, canonicals, schema, OG); llms.txt and analytics open | branch `toddhamam/seo-measure-baseline` (PR TBD) |
 | 1 | Local entity: Google Business Profile, name/address consistency, directories | Off-page | blocked: needs Business Profile access (NY-4) | – |
 | 2 | Health-claim review fixes on /services and /specialties | Correct | blocked: clinic review (NY-3) | – |
 | 3 | Speed: hero video and images | Repair | pending | – |

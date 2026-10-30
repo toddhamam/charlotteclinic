@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-30",
+  "action": "repair",
+  "rule": [
+    "canonical-mismatch (no canonical) x7",
+    "missing-schema x7",
+    "sitemap.xml 404",
+    "robots.txt 404",
+    "title/description outside 50-60/150-160 on 6 pages",
+    "no og:/twitter: tags"
+  ],
+  "regression": false,
+  "before": {
+    "fingerprint": ".seo/health/2026-10-29.json",
+    "violations": 14,
+    "sitemap": "404",
+    "robots": "404"
+  },
+  "after": {
+    "fingerprint": ".seo/health/2026-10-30-local.json (repo HTML via --local-root, production URLs)",
+    "violations": 0
+  },
+  "generator": "none: static site, each page owns its <head>; all 7 edited in one pass from one data table. Future pages must copy the block; health_diff --expect-schema catches omissions.",
+  "verification": [
+    "health_diff --local-root: 0 violations",
+    "JSON-LD parses on all 7 pages; rendered DOM (headless Chrome) contains it",
+    "one canonical + one h1 per page",
+    "sitemap.xml well-formed, no lastmod",
+    "Vercel preview deployed (success) but protected by Vercel Authentication: production-shaped fetch not possible from this host"
+  ],
+  "schema_content_match": "Prue Klausener has no AACMA badge on the page, so her Person node omits memberOf; alternateName 'Charlotte Clinic' records the documented former name."
+}
