@@ -51,9 +51,10 @@
     "_comment": "The EXACT property string from list_properties. 'sc-domain:example.com' and 'https://example.com/' are not interchangeable. null means the site is not verified in this Google account — say it once and carry on."
   },
   "bing": {
-    "api_key_env": null,
-    "site_url": null,
-    "_comment": "Optional. api_key_env names the environment variable holding the Bing Webmaster API key; never store the key itself. The AI Performance report is UI-only — no API. Record Bing as a separate panel, never summed with Google."
+    "api_key_env": "BING_WEBMASTER_API_KEY",
+    "site_url": "https://theqicollective.com.au/",
+    "_comment": "Optional. api_key_env names the environment variable holding the Bing Webmaster API key; never store the key itself. The AI Performance report is UI-only — no API. Record Bing as a separate panel, never summed with Google.",
+    "_key_location": "Not in Git. Held by Todd; in a workspace, put it in .context/seo/bing.env (gitignored) and source it before a run."
   },
   "openseo": {
     "project_id": null,
@@ -131,7 +132,7 @@
   },
   "tools_detected": {
     "gsc": false,
-    "bing_webmaster": false,
+    "bing_webmaster": true,
     "dfs": false,
     "openseo": false,
     "answer_engine_data": false,
@@ -145,7 +146,7 @@
     "social_posting": false,
     "browser": true,
     "git": true,
-    "_note": "2026-10-29: psi via local Lighthouse 12 CLI (npx) + google-chrome; keyless PageSpeed API returned 429. No GSC/GA4/Bing/DFS client in this host."
+    "_note": "2026-10-29: psi via local Lighthouse 12 CLI (npx) + google-chrome; keyless PageSpeed API returned 429. No GSC/GA4/Bing/DFS client in this host. 2026-10-30: Bing Webmaster API key verified (GetUserSites: verified property https://theqicollective.com.au/, imported from GSC)."
   },
   "tools_declined": [],
   "cache": {
