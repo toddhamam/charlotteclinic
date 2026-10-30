@@ -93,6 +93,12 @@ charlotteclinic/
 
 ## Changelog
 
+### Emily Floreani Removed from the Site
+- Emily has left the clinic, so her gallery tile and full profile are gone from the Practitioners page, leaving Charlotte, Annabelle, Kate, and Prue in a 2x2 grid
+- Removed her practitioner card and services panel, including all her Cliniko booking links, from the booking portal so visitors can no longer book with her
+- Deleted the now-unused `images/emily-floreani.jpg`; old `?practitioner=emily` links fall back to the gallery or practitioner picker
+- The homepage team portrait still shows all five practitioners and will be replaced once a new group photo is taken
+
 ### SEO/GEO Skill Installed
 
 - Added the SEO/GEO skill (v2.2.0) used in the healer-sites and funnel-builder repos at `.agents/skills/seo/`, with `.claude/skills/seo` symlinked to it and a `/seo` command in `.claude/commands/seo.md`
