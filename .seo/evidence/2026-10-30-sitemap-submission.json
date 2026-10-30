@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-30",
+  "action": "repair + distribute receipts",
+  "production_check": {
+    "sitemap.xml": 200,
+    "robots.txt": 200,
+    "og-image.png": 200,
+    "canonical_self_referencing": "7/7",
+    "jsonld_blocks": "7/7",
+    "og_image_tag": "7/7"
+  },
+  "schema_validator_live": {
+    "/": "0 errors",
+    "/contact": "0 errors",
+    "/booking": "0 errors",
+    "/practitioners": "4 errors: worksFor referenced the clinic @id with no typed node on the page (INVALID_OBJECT, Thing not Organization)"
+  },
+  "fix": "embed the full MedicalClinic node in the practitioners @graph; validator on the repo HTML: 0 errors, 0 warnings",
+  "bing": {
+    "SubmitFeed": "https://www.theqicollective.com.au/sitemap.xml accepted (HTTP 200), GetFeeds status Pending",
+    "SubmitUrlBatch": "7 URLs accepted (HTTP 200); daily quota 100 -> 93, monthly 200 -> 193",
+    "note": "receipts only; not an indexing outcome"
+  },
+  "google": "No Search Console API connection; sitemap ping endpoint retired by Google in 2023. Sitemap submission is a UI step for Todd (NY-7)."
+}
