@@ -1,0 +1,106 @@
+[
+  {
+    "claim": "Clinic address is 22 Kensington Road, Rose Park 5067",
+    "paths": [
+      "*.html",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "Charlton Street",
+      "Bridgewater"
+    ],
+    "must_match": [
+      "22 Kensington Road"
+    ]
+  },
+  {
+    "claim": "Clinic email domain is theqicollective.com.au",
+    "paths": [
+      "*.html",
+      "js/*.js",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "thechicollective",
+      "theqicolective"
+    ],
+    "must_match": [
+      "hello@theqicollective\\.com\\.au"
+    ]
+  },
+  {
+    "claim": "The clinic is called The Qi Collective, not Charlotte Clinic",
+    "paths": [
+      "*.html",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "(?<!\"alternateName\": \")Charlotte Clinic"
+    ],
+    "must_match": [],
+    "_note": "alternateName in JSON-LD records the former name on purpose (2026-10-30 tech run)"
+  },
+  {
+    "claim": "Health advertising gate: no cure, guarantee or superiority language",
+    "paths": [
+      "*.html",
+      "llms.txt",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "\\bcures?\\b",
+      "\\bguarantee",
+      "\\bpainless\\b",
+      "\\bmiracle",
+      "\\bbest acupuncturist",
+      "proven to (treat|cure|work)",
+      "instant relief"
+    ],
+    "must_match": []
+  },
+  {
+    "claim": "Health advertising review: cupping detox and diagnosis claims (flagged 2026-10-29, awaiting clinic review NY-3)",
+    "paths": [
+      "*.html",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "draw toxins",
+      "explanation of underlying pathology"
+    ],
+    "must_match": []
+  },
+  {
+    "claim": "Health advertising review: cosmetic acupuncture physiological claim (flagged 2026-10-29, NY-3)",
+    "paths": [
+      "*.html",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "release of collagen"
+    ],
+    "must_match": []
+  },
+  {
+    "claim": "Health advertising review: comparative efficacy claim for children (flagged 2026-10-29, NY-3)",
+    "paths": [
+      "*.html",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "equal effect to needles"
+    ],
+    "must_match": []
+  },
+  {
+    "claim": "Australian spelling: Paediatric",
+    "paths": [
+      "*.html",
+      "https://www.theqicollective.com.au*"
+    ],
+    "must_not_match": [
+      "Pediatric"
+    ],
+    "must_match": []
+  }
+]

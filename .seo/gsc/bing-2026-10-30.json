@@ -1,0 +1,42 @@
+{
+  "source": "bing_webmaster_api",
+  "site_url": "https://theqicollective.com.au/",
+  "pulled": "2026-10-30",
+  "note": "Property imported from GSC 2026-10-30; Bing says reports may take up to 48h. Empty stats are 'no data yet', not zero traffic.",
+  "query_stats_rows": 0,
+  "page_stats_rows": 0,
+  "rank_traffic_rows": 0,
+  "crawl_stats_rows": 0,
+  "crawl_issues": 0,
+  "sitemaps_submitted": 0,
+  "url_info": {
+    "/": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-29"
+    },
+    "/about": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-07"
+    },
+    "/services": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-26"
+    },
+    "/specialties": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-25"
+    },
+    "/practitioners": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-25"
+    },
+    "/booking": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-26"
+    },
+    "/contact": {
+      "discovered": "2026-08-24",
+      "last_crawled": "2026-10-29"
+    }
+  }
+}

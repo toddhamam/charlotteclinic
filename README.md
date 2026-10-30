@@ -93,6 +93,15 @@ charlotteclinic/
 
 ## Changelog
 
+### Search Engine Foundations: Sitemap, Canonicals and Structured Data
+
+- Added `sitemap.xml` (the seven pages at their clean URLs, with no build-date `lastmod`) and `robots.txt` pointing to it. Before this, both returned 404
+- Every page now has a self-referencing canonical tag, which also covers the `?practitioner=` and `?subject=` link variants
+- Rewrote page titles to 50–60 characters and descriptions to 150–160, putting location and service first. The wording follows the health advertising rules (no claims about treatment results)
+- Added Open Graph and Twitter tags with a new 1200×630 preview image, `images/og-image.png`, in the brand teal and gold
+- Added JSON-LD that matches what each page shows: `MedicalClinic` with address, hours, email and Instagram on Home and Contact; `WebSite`; `WebPage`/`AboutPage`/`ContactPage` with breadcrumbs; and a `Person` for each practitioner (AACMA membership only where the profile shows the badge)
+- Started SEO tracking in `.seo/` (the foundation, the first measurements and run records)
+
 ### Instagram Feed on the Homepage: "A Space Where Qi Flows"
 - Added a section between "Areas of Special Interest" and the footer. The clinic's latest Instagram posts drift slowly sideways as cards styled like real Instagram posts (profile bar, photo, like/comment/share/save icons, caption), with a "Follow along" button
 - Live posts come from a Behold JSON feed (`data-feed-url` on the section). Only the data is used, so no Behold branding appears; the site draws every card itself. The connected account is @theqicollective_, authorised by the clinic through Behold's client link
